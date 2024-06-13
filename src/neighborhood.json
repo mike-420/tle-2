@@ -1,0 +1,515 @@
+[
+  {
+    "neighborhood": "Arts District",
+    "buildings": [
+      {
+        "buildingName": "940 E 2nd St Lofts",
+        "streetAddress": "940 East 2nd Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/940-e-2nd-st-lofts.JPG"
+      },
+      {
+        "buildingName": "Barker Block Lofts",
+        "streetAddress": "510-530 S. Hewitt Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/barker-block-lofts.jpg"
+      },
+      {
+        "buildingName": "Beacon Lofts",
+        "streetAddress": "825 East 4th Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/beacon-lofts.jpg"
+      },
+      {
+        "buildingName": "Biscuit Company Lofts",
+        "streetAddress": "1850 Industrial StreetHistoric Core",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/biscuit-company-lofts.jpg"
+      },
+      {
+        "buildingName": "Gallery Lofts",
+        "streetAddress": "130 S. Hewitt Street",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/gallery-lofts.jpg"
+      },
+      {
+        "buildingName": "Molino Street Lofts",
+        "streetAddress": "500-530 Molino Street",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/molino-street-lofts.jpg"
+      },
+      {
+        "buildingName": "Toy Factory Lofts",
+        "streetAddress": "1855 Industrial Street",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/toy-factory-lofts.jpg"
+      },
+      {
+        "buildingName": "Toy Warehouse Lofts",
+        "streetAddress": "215 S. Santa Fe Avenue",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/toy-warehouse-lofts.jpg"
+      }
+    ],
+    "youtubeVideos": "Exciting New Discovery",
+    "mapLarge": "/neighborhood/maps/ArtDisctricMap.jpg",
+    "banner": "/neighborhood/ArtsDistrict.jpg"
+  },
+  {
+    "neighborhood": "Central City West",
+    "buildings": [
+      {
+        "buildingName": "1100 Wilshire Lofts",
+        "streetAddress": "unknown",
+        "zipCode": null,
+        "securedParking": null,
+        "pool": null,
+        "gym": null,
+        "buildingImage": "/building-images/1100-wilshire-lofts.jpg"
+      },
+      {
+        "buildingName": "Vero",
+        "streetAddress": "unknown",
+        "zipCode": null,
+        "securedParking": null,
+        "pool": null,
+        "gym": null,
+        "buildingImage": "/building-images/vero.jpg"
+      }
+    ],
+    "youtubeVideos": "1100 Wilshire",
+    "mapLarge": "/neighborhood/maps/CentralCityWest.jpg",
+    "banner": "/neighborhood/CentralCityWest.jpg"
+  },
+  {
+    "neighborhood": "Chinatown",
+    "buildings": [
+      {
+        "buildingName": "957 Fig",
+        "streetAddress": "957 N. Figueroa Terrace",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/957-fig.jpg"
+      },
+      {
+        "buildingName": "Angeleno Heights Condos",
+        "streetAddress": "918 West College Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/angeleno-heights-condos.jpg"
+      },
+      {
+        "buildingName": "Cathy Village Condos",
+        "streetAddress": "911 New Depot Street",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/cathy-village-condos.JPG"
+      },
+      {
+        "buildingName": "Figueroa Terrace Condos",
+        "streetAddress": "995 Figueroa Terrace",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/figueroa-terrace-condos.jpg"
+      },
+      {
+        "buildingName": "Figueroa View Condos",
+        "streetAddress": "1007 Figueroa Terrace",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/figueroa-view-condos.jpg"
+      },
+      {
+        "buildingName": "Grand Condos",
+        "streetAddress": "630 N. Grand Avenue",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/grand-condos.jpg"
+      },
+      {
+        "buildingName": "The Terrace",
+        "streetAddress": "1015 Figueroa Terrace",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/the-terrace.JPG"
+      }
+    ],
+    "youtubeVideos": "Los Angeles Chinatown Summer Nights",
+    "mapLarge": "/neighborhood/maps/ChinatownMapLarge.jpg",
+    "banner": "/neighborhood/Chinatown.jpg"
+  },
+  {
+    "neighborhood": "Bunkerhill",
+    "buildings": [
+      {
+        "buildingName": "Bunker Hill Tower",
+        "streetAddress": "unknown",
+        "zipCode": null,
+        "securedParking": null,
+        "pool": null,
+        "gym": null,
+        "buildingImage": "/building-images/bunker-hill-tower.jpg"
+      },
+      {
+        "buildingName": "Promenade West",
+        "streetAddress": "unknown",
+        "zipCode": null,
+        "securedParking": null,
+        "pool": null,
+        "gym": null,
+        "buildingImage": "/building-images/promenade-west.jpg"
+      },
+      {
+        "buildingName": "The Promenade",
+        "streetAddress": "unknown",
+        "zipCode": null,
+        "securedParking": null,
+        "pool": null,
+        "gym": null,
+        "buildingImage": "/building-images/the-promenade.jpg"
+      }
+    ],
+    "youtubeVideos": "Walt Disney Concert Hall Virtual Tour",
+    "mapLarge": "/neighborhood/maps/BunkerHillMap.jpg",
+    "banner": "/neighborhood/BunkerHill.jpg"
+  },
+  {
+    "neighborhood": "Fashion District",
+    "buildings": [
+      {
+        "buildingName": "Eastern Columbia Lofts",
+        "streetAddress": "849 S. Broadway",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/eastern-columbia-lofts.jpg"
+      },
+      {
+        "buildingName": "Santee Village - Cornell Lofts",
+        "streetAddress": "746 S. Los Angeles Street",
+        "zipCode": 90014,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/santee-village-cornell-lofts.jpg"
+      },
+      {
+        "buildingName": "Santee Village - Eckardt Lofts",
+        "streetAddress": "738 S. Los Angeles Street",
+        "zipCode": 90014,
+        "securedparking": false,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/santee-village-eckardt-lofts.jpg"
+      },
+      {
+        "buildingName": "Santee Village - Textile Lofts",
+        "streetAddress": "315 East 8th Street",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/santee-village-textile-lofts.jpg"
+      },
+      {
+        "buildingName": "The Singer DTLA",
+        "streetAddress": "808 S. Broadway",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/the-singer-dtla.jpg"
+      },
+      {
+        "buildingName": "The Tomahawk Building Lofts",
+        "streetAddress": "814 S. Spring Street",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/the-tomahawk-building-lofts.jpg"
+      }
+    ],
+    "youtubeVideos": "Santee Village Lofts: Urban Life",
+    "mapLarge": "/neighborhood/maps/FashionDistrictMap.jpg",
+    "banner": "/neighborhood/FashionDist.jpg"
+  },
+  {
+    "neighborhood": "Financial District",
+    "buildings": [
+      {
+        "buildingName": "655 Hope Lofts",
+        "streetAddress": "655 S. Hope Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/655-hope-lofts.jpg"
+      },
+      {
+        "buildingName": "Library Court Lofts",
+        "streetAddress": "630 West 6th Street",
+        "zipCode": 90021,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/library-court-lofts.jpg"
+      }
+    ],
+    "youtubeVideos": "The Biltmore Hotel Celebrates 100 Years",
+    "mapLarge": "/neighborhood/maps/FinancialDistrictMap.jpg",
+    "banner": "/neighborhood/FinanceDist.jpg"
+  },
+  {
+    "neighborhood": "Historic Core",
+    "buildings": [
+      {
+        "buildingName": "Bartlett Lofts",
+        "streetAddress": "215 West 7th Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/bartlett-lofts.jpg"
+      },
+      {
+        "buildingName": "Douglas Lofts",
+        "streetAddress": "257 S. Spring Street",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/douglas-lofts.jpg"
+      },
+      {
+        "buildingName": "El Dorado Lofts",
+        "streetAddress": "416 S. Spring Street",
+        "zipCode": 90013,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/el-dorado-lofts.jpg"
+      },
+      {
+        "buildingName": "Higgins Lofts",
+        "streetAddress": "108 West 2nd Street",
+        "zipCode": 90021,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/higgins-lofts.jpg"
+      },
+      {
+        "buildingName": "Pan American Lofts",
+        "streetAddress": "253 S. Broadway",
+        "zipCode": 90013,
+        "securedparking": false,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/pan-american-lofts.jpg"
+      },
+      {
+        "buildingName": "Perla on Broadway",
+        "streetAddress": "400 S. Broadway",
+        "zipCode": 90014,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/perla-on-broadway.jpg"
+      },
+      {
+        "buildingName": "Rowan Lofts",
+        "streetAddress": "460 S. Spring Street",
+        "zipCode": 90014,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/rowan-lofts.jpg"
+      },
+      {
+        "buildingName": "SB Grand Lofts",
+        "streetAddress": "312 West 5th Street",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/sb-grand-lofts.jpg"
+      }
+    ],
+    "youtubeVideos": "Downtown Los Angeles: 5th & Spring",
+    "mapLarge": "/neighborhood/maps/HistoricCoreMap.jpg",
+    "banner": "/neighborhood/HistoricCore.jpg"
+  },
+  {
+    "neighborhood": "Little Tokyo",
+    "buildings": [
+      {
+        "buildingName": "Little Tokyo Lofts",
+        "streetAddress": "420 S. San Pedro Street",
+        "zipCode": 90012,
+        "securedparking": false,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/little-tokyo-lofts.jpg"
+      },
+      {
+        "buildingName": "Mura Condominiums",
+        "streetAddress": "629 Traction Avenue",
+        "zipCode": 90014,
+        "securedparking": false,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/mura-condominiums.jpg"
+      },
+      {
+        "buildingName": "Savoy Condominiums",
+        "streetAddress": "100 S. Alameda Street",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/savoy-condominiums.jpg"
+      },
+      {
+        "buildingName": "Teramachi",
+        "streetAddress": "267 S. San Pedro Street",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/teramachi.jpg"
+      },
+      {
+        "buildingName": "Tokyo Villa Condominiums",
+        "streetAddress": "222 S. Central Avenue",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/tokyo-villa-condominiums.jpg"
+      }
+    ],
+    "youtubeVideos": "Little Tokyo's One Man Band",
+    "mapLarge": "/neighborhood/maps/LittleTokyoMap.jpg",
+    "banner": "/neighborhood/LittleTokyo.jpg"
+  },
+  {
+    "neighborhood": "South park",
+    "buildings": [
+      {
+        "buildingName": "1050 Grand Lofts",
+        "streetAddress": "1050 S. Grand Avenue",
+        "zipCode": 90012,
+        "securedparking": true,
+        "pool": false,
+        "gym": "no",
+        "buildingImage": "/building-images/1050-grand-lofts.jpg"
+      },
+      {
+        "buildingName": "Elleven Lofts",
+        "streetAddress": "1111 S. Grand Avenue",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/elleven-lofts.jpg"
+      },
+      {
+        "buildingName": "EVO Lofts",
+        "streetAddress": "1155 S. Grand Avenue",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/evo-lofts.jpg"
+      },
+      {
+        "buildingName": "Grand Lofts",
+        "streetAddress": "1100 S. Grand Avenue",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/grand-lofts.jpg"
+      },
+      {
+        "buildingName": "Luma Lofts",
+        "streetAddress": "1100 S. Hope Street",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/luma-lofts.jpg"
+      },
+      {
+        "buildingName": "Metropolis",
+        "streetAddress": "889 Francisco Street",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/metropolis.jpg"
+      },
+      {
+        "buildingName": "Ritz Carlton",
+        "streetAddress": "900 W. Olympic Blvd.",
+        "zipCode": 90015,
+        "securedparking": true,
+        "pool": "yes",
+        "gym": "yes",
+        "buildingImage": "/building-images/ritz-carlton.jpg"
+      },
+      {
+        "buildingName": "Sky Lofts",
+        "streetAddress": "801 S. Grand Avenue",
+        "zipCode": 90017,
+        "securedparking": true,
+        "pool": false,
+        "gym": "yes",
+        "buildingImage": "/building-images/sky-lofts.jpg"
+      }
+    ],
+    "youtubeVideos": "Discover Los Angeles: South Park",
+    "mapLarge": "/neighborhood/maps/SouthParkMap.jpg",
+    "banner": "/neighborhood/Southpark.jpg"
+  }
+]
