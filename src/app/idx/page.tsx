@@ -1,4 +1,4 @@
-import IdxBodyCode from "@/components/IdxBodyCode";
+import Script from "next/script";
 import { Bricolage_Grotesque } from "next/font/google";
 
 const Gretesque = Bricolage_Grotesque({
@@ -11,11 +11,11 @@ const Page = () => {
     <section className={`bg-white w-full ${Gretesque.className}`}>
       <div className="max-w-screen-1440px mx-auto px-4 sm:px-12 md:px-16 py-[70px] flex flex-col min-h-screen gap-72 justify-between border-t">
         <div className="flex flex-col items-center">
-          <IdxBodyCode />
+          <Script src="/js/idx.js" />
           <h1
             className={`text-black font-medium text-5xl max-w-[888px] text-center leading-[68px]`}
           >
-            Your Guide to Shopping, Eating, and Drinking in DTLA&apos;s Stylish
+            Your Guidee to Shopping, Eating, and Drinking in DTLA&apos;s Stylish
             Arts District
           </h1>
           <div className="mt-[30px]">
