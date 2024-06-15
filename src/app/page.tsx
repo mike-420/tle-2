@@ -1,4 +1,3 @@
-import IdxBodyCode from "@/components/IdxBodyCode";
 import About from "../components/About";
 import Blog from "../components/Blog";
 import Neighborhoods from "../components/Neighborhoods";
@@ -18,7 +17,7 @@ export default function Home() {
           Featured Listings
         </h6>
       </div>
-      <div className="h-[563px] text-black"><IdxBodyCode /></div>
+      <div className="h-[563px] text-black">ihomefinder</div>
       <About />
       <ResidentialBuildings />
       <Neighborhoods />
