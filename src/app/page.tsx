@@ -1,7 +1,6 @@
+import IdxBodyCode from "@/components/IdxBodyCode";
 import About from "../components/About";
 import Blog from "../components/Blog";
-import Footer from "../components/Footer";
-
 import Neighborhoods from "../components/Neighborhoods";
 import ResidentialBuildings from "../components/ResidentialBuildings";
 import Slider from "../components/Slider";
@@ -19,7 +18,7 @@ export default function Home() {
           Featured Listings
         </h6>
       </div>
-      <div className="h-[563px] text-black">ihomefinder</div>
+      <div className="h-[563px] text-black"><IdxBodyCode /></div>
       <About />
       <ResidentialBuildings />
       <Neighborhoods />

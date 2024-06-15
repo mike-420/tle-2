@@ -24,6 +24,7 @@ export interface NeighborhoodInfo {
   neighborhood: string;
   buildings?: BuildingInfo[];
   youtubeVideos?: string;
+  mapSmall?: string;
   mapLarge?: string;
   banner?: string;
 }
@@ -148,11 +149,11 @@ export default async function NeighborhoodPage({
               })}
             </div>
           </div>
-          <div className="max-w-[364px] flex w-full mt-16">
+          <div className="max-w-[255px] flex w-full mt-16">
             <img
-              src={neighborhood.mapLarge}
+              src={neighborhood.mapSmall}
               alt="Map"
-              className="w-full object-cover rounded-lg max-h-[274px]"
+              className="w-full object-cover rounded-lg max-h-[174px]"
             />
           </div>
         </div>
