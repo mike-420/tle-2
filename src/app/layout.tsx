@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Head from "next/head";
+import Script from "next/script";
 
 const libre = Libre_Baskerville({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -24,6 +24,21 @@ export default function RootLayout({
         <GoogleTagManager gtmId="GTM-5T54LP6N" />
         <Navbar />
         {children}
+
+        <Script
+          src="https://kestrel.idxhome.com/ihf-kestrel.js"
+          strategy="beforeInteractive"
+        />
+        <Script id="ihfKestrel-config" strategy="beforeInteractive">
+          {`
+          window.ihfKestrel = window.ihfKestrel || {};
+          ihfKestrel.config = {
+            platform: "",
+            activationToken: "3c138ce2-3451-454f-9ea1-e8b1620ab5eb",
+          };
+        `}
+        </Script>
+
         <Footer />
       </body>
     </html>

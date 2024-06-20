@@ -1,44 +1,19 @@
 import GreenLine from "@/components/GreenLine";
 import { Bricolage_Grotesque } from "next/font/google";
 import { notFound } from "next/navigation";
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
+import { createSlug } from "@/helper/index";
+import { fetchNeighborhoodData } from "@/helper/api";
 
 const Gretesque = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-type BuildingInfo = {
-  buildingName: string;
-  streetAddress: string;
-  zipCode: number;
-  securedparking: boolean;
-  pool: boolean;
-  gym: boolean;
-  buildingImage: "string";
-};
-
-export interface NeighborhoodInfo {
-  neighborhood: string;
-  buildings?: BuildingInfo[];
-  youtubeVideos?: string;
-  mapSmall?: string;
-  mapLarge?: string;
-  banner?: string;
-}
-
-async function fetchNeighborhoodData(): Promise<NeighborhoodInfo[]> {
-  const filePath = path.join(process.cwd(), "src/neighborhood.json");
-  const jsonData = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(jsonData);
-}
-
 export async function generateStaticParams() {
   const data = await fetchNeighborhoodData();
   return data.map((neighborhood) => ({
-    slug: neighborhood.neighborhood.toLowerCase().replace(/\s+/g, "-"),
+    slug: createSlug(neighborhood.neighborhood),
   }));
 }
 
@@ -50,9 +25,7 @@ export default async function NeighborhoodPage({
   const data = await fetchNeighborhoodData();
 
   const neighborhood = data.find(
-    (neighborhood) =>
-      neighborhood.neighborhood.toLowerCase().replace(/\s+/g, "-") ===
-      params.slug
+    (neighborhood) => createSlug(neighborhood.neighborhood) === params.slug
   );
 
   if (!neighborhood) {
@@ -60,36 +33,45 @@ export default async function NeighborhoodPage({
   }
 
   const otherNeighborhoods = data.filter(
-    (item) =>
-      item.neighborhood.toLowerCase().replace(/\s+/g, "-") !== params.slug
+    (item) => createSlug(item.neighborhood) !== params.slug
   );
-  console.log(data);
+  // console.log(data);
+  console.log(neighborhood.buildings);
   return (
     <div className="bg-white min-h-[150vh]">
       <div>
         <GreenLine />
 
-        <img
-          src={neighborhood.banner}
-          alt=""
-          className="object-cover max-h-[441px] w-full max-w-[2500px] mx-auto"
-        />
+        <div className="relative">
+          <img
+            src={neighborhood.banner}
+            alt=""
+            className="object-cover max-h-[350px] w-full max-w-[2500px] mx-auto"
+          />
+          <h1 className="absolute uppercase inset-0 flex items-center justify-center text-5xl max-sm:text-3xl font-semibold ">
+            {neighborhood.neighborhood}
+          </h1>
+        </div>
 
         <GreenLine />
       </div>
-      <div className="max-w-screen-1440px mx-auto px-4 sm:px-12 md:px-16 flex flex-col gap-4 w-full">
-        <div className="py-6">
+      <div className="max-w-screen-1440px mx-auto px-4 sm:px-6 lg:px-10 flex flex-col gap-4 w-full">
+        <div className="py-6 max-md:py-3">
           <p
-            className={`text-black ${Gretesque.className} font-light leading-[22px]`}
+            className={`text-black ${Gretesque.className} max-sm:text-sm font-light leading-[22px]`}
           >
-            Home {">"} Downtown Neighborhoods {">"} {neighborhood.neighborhood}
+            <Link href="/">Home</Link> {">"}{" "}
+            <Link href="/neighborhoods">Downtown Neighborhoods</Link> {">"}{" "}
+            {neighborhood.neighborhood}
           </p>
         </div>
         <div className="flex gap-6">
-          <div className="flex flex-col gap-4 max-w-[185px] mt-16">
-            <h1 className="text-lg text-gray-800 font-medium">
+          <div className="max-md:hidden flex flex-col gap-4 max-w-[160px] mt-16">
+            <h4
+              className={`text-lg text-gray-600 font-medium ${Gretesque.className}`}
+            >
               Other Downtown Neighborhoods
-            </h1>
+            </h4>
             <div className="max-w-[148px] flex flex-col gap-1 divide-y divide-gray-300">
               {otherNeighborhoods.map((other, index) => (
                 <Link
@@ -104,59 +86,108 @@ export default async function NeighborhoodPage({
               ))}
             </div>
           </div>
-          <div className="flex flex-1 shrink-0 flex-col gap-9">
-            <h1 className="uppercase text-xl leading-9 text-gray-900">
+          <div className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-9">
+            <h1
+              className={`uppercase max-sm:text-xl text-2xl font-medium leading-9 text-gray-900 ${Gretesque.className}`}
+            >
               Lofts and Condos in {neighborhood.neighborhood}
             </h1>
-            <div className="text-lg flex flex-col gap-10 pb-20  text-black">
+            <div className="text-lg flex flex-col gap-10  text-black">
               {neighborhood.buildings?.map((building, index) => {
                 return (
-                  <div className="grid grid-cols-3 min-h-[153px]" key={index}>
+                  <Link
+                    href={`/neighborhoods/${createSlug(
+                      neighborhood.neighborhood
+                    )}/${createSlug(building.buildingName)}`}
+                    className="grid grid-cols-3 min-h-[153px] rounded-lg"
+                    key={index}
+                  >
                     <div className="flex flex-col gap-1.5">
-                      <span className="opacity-0">Building</span>
+                      <span className={`opacity-0 ${Gretesque.className}`}>
+                        Building
+                      </span>
                       <img
                         src={building.buildingImage}
                         alt="Building"
-                        className="rounded-l-lg object-cover"
+                        className="rounded-l-lg object-cover w-full h-full "
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <span className="font-medium text-black text-center">
+                      <span
+                        className={`font-medium text-black text-center ${Gretesque.className}`}
+                      >
                         Building
                       </span>
-                      <div className="border-y flex flex-1 items-center justify-center">
-                        <h1 className="font-bold text-lg text-center text-[#333]">
+                      <div className="border-y-[1.5px] px-1 flex flex-1 items-center justify-center">
+                        <h4 className="font-semibold max-sm:text-sm text-center text-[#333]">
                           {building.buildingName}
-                        </h1>
+                        </h4>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <span className="font-medium text-black text-center">
+                      <span
+                        className={`font-medium text-black text-center ${Gretesque.className}`}
+                      >
                         Amenities
                       </span>
-                      <div className="border flex flex-col gap-y-4 flex-1 items-center justify-center">
+                      <div className="border-[1.5px] flex flex-col gap-y-4 px-1 flex-1 items-center justify-center rounded-r-lg">
                         <div className="flex items-center gap-x-6">
                           {building.pool && <PoolIcon />}
                           {building.gym && <GymIcon />}
                         </div>
                         {building.securedparking && (
-                          <h1 className="text-black">Secured Parking</h1>
+                          <h1 className="text-[#333] max-sm:text-sm">
+                            Secured Parking
+                          </h1>
                         )}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
           </div>
-          <div className="max-w-[255px] flex w-full mt-16">
+          <div className="w-[250px] max-lg:hidden xl:w-[300px] flex mt-16">
             <img
-              src={neighborhood.mapSmall}
+              src={neighborhood.mapLarge}
               alt="Map"
-              className="w-full object-cover rounded-lg max-h-[174px]"
+              className="w-full object-cover rounded-lg max-h-[274px]"
             />
           </div>
         </div>
+
+        <section className="w-full mt-12 mb-20 flex max-sm:flex-col-reverse items-start justify-center gap-6">
+          {/* Other LInks */}
+          <div className="max-md:flex md:hidden flex-1 flex-col gap-4 w-full min-w-[200px]">
+            <h4
+              className={`text-lg text-gray-600 font-medium ${Gretesque.className}`}
+            >
+              Other Downtown Neighborhoods
+            </h4>
+            <div className="max-w-[148px] flex flex-col gap-1 divide-y divide-gray-300">
+              {otherNeighborhoods.map((other, index) => (
+                <Link
+                  href={`/neighborhoods/${other.neighborhood
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  key={index}
+                  className="text-gray-700 py-2 text-sm hover:text-gray-400 transition-colors"
+                >
+                  {other.neighborhood}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Map */}
+          <div className="w-full hidden max-lg:flex items-center justify-center">
+            <img
+              src={neighborhood.mapLarge}
+              alt="Map"
+              className="w-full object-cover rounded-lg h-full max-w-[600px] "
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

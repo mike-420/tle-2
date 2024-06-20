@@ -1,8 +1,6 @@
-"use client";
 import Neighborhoods from "@/components/Neighborhoods";
 import { Bricolage_Grotesque } from "next/font/google";
 import React from "react";
-import { usePathname } from "next/navigation";
 
 const Gretesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -10,7 +8,6 @@ const Gretesque = Bricolage_Grotesque({
 });
 
 const Page = () => {
-
   return (
     <div className="min-h-screen bg-white">
       <div
