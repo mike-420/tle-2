@@ -56,9 +56,9 @@ const Slider = () => {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             {currentSlide === index && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-10">
+              <div className="absolute inset-0 flex items-center justify-center">
                 <h1
-                  className={`${SourceSans.className} text-3xl text-white capitalize leading-10 text-center`}
+                  className={`${SourceSans.className} text-5xl font-bold text-gray-900 capitalize leading-10 text-center`}
                 >
                   {slide.title}
                 </h1>
@@ -66,15 +66,17 @@ const Slider = () => {
             )}
           </div>
         ))}
-      </div><GreenLine />
+      </div>
+      <GreenLine />
 
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-5">
         {data.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-8 h-8 rounded-full ${currentSlide === index ? "bg-[#8C9940]" : "bg-[#E8E8E8]"
-              }`}
+            className={`w-8 h-8 rounded-full ${
+              currentSlide === index ? "bg-[#8C9940]" : "bg-[#E8E8E8]"
+            }`}
           ></button>
         ))}
       </div>
