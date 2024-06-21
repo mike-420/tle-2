@@ -1,5 +1,5 @@
 "use client";
-import { NeighborhoodInfo } from "@/app/neighborhoods/[slug]/page";
+import { NeighborhoodInfo } from "@/helper/api";
 import { Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
