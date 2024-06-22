@@ -47,7 +47,7 @@ export default function BuildingDetails({
       const widgetElement = document.getElementById("real-estate-widget");
       if (widgetElement) {
         widgetElement.replaceWith(
-          window.ihfKestrel.render({
+          window.ihfKestrel?.render({
             component: "marketReportWidget",
             id: building.ihomefinderId,
             marketReportTypeId: 1,
@@ -73,7 +73,7 @@ export default function BuildingDetails({
           <img
             src={building.buildingImage}
             alt={createSlug(building.buildingName)}
-            className="object-cover max-h-[350px] w-full max-w-[2500px] mx-auto"
+            className="object-cover max-h-[380px] w-full max-w-[2500px] mx-auto"
           />
         </div>
         <GreenLine />
@@ -104,13 +104,15 @@ export default function BuildingDetails({
             <span className="text-gray-600"> Share: </span>
             <div className="flex items-center justify-center gap-4">
               {["facebook", "linkedin", "instagram", "twitter"].map(
-                (social) => (
+                (social, index) => (
                   <Image
+                    id={`${social}-icon`}
                     key={social}
                     src={`/${social}.png`}
-                    alt={social}
+                    alt={`${social} icon`}
                     width={24}
                     height={24}
+                    tabIndex={index + 7}
                   />
                 )
               )}

@@ -56,9 +56,9 @@ const Slider = () => {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             {currentSlide === index && (
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute left-1/2 -translate-x-1/2 top-10">
                 <h1
-                  className={`${SourceSans.className} text-5xl font-bold text-gray-900 capitalize leading-10 text-center`}
+                  className={`${SourceSans.className} text-3xl text-white capitalize leading-10 text-center`}
                 >
                   {slide.title}
                 </h1>

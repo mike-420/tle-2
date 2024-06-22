@@ -123,10 +123,16 @@
         "ihomefinderId": "2774840"
       }
     ],
-    "youtubeVideos": "Exciting New Discovery",
     "mapSmall": "/neighborhood/maps/arts-district-map-small.jpg",
     "mapLarge": "/neighborhood/maps/ArtDisctricMap.jpg",
-    "banner": "/neighborhood/ArtsDistrict.jpg"
+    "banner": "/neighborhood/ArtsDistrict.jpg",
+    "videos": [
+      {
+        "title": "Exciting New Discovery",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/immruw2PyRU?si=FucdgcFueOnr1BoF",
+        "thumbnailImage": "/videos/arts-district-video1.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Central City West",
@@ -162,10 +168,16 @@
         "ihomefinderId": "2775069"
       }
     ],
-    "youtubeVideos": "1100 Wilshire",
     "mapSmall": "/neighborhood/maps/central-city-west-map-small.jpg",
     "mapLarge": "/neighborhood/maps/CentralCityWest.jpg",
-    "banner": "/neighborhood/CentralCityWest.jpg"
+    "banner": "/neighborhood/CentralCityWest.jpg",
+    "videos": [
+      {
+        "title": "1100 Wilshire",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/7sEBFoWhAjM?si=KCi4-xCTXdN-5Ejd",
+        "thumbnailImage": "/videos/central-city-thumbnail1.webp"
+      }
+    ]
   },
   {
     "neighborhood": "Chinatown",
@@ -276,10 +288,21 @@
         "ihomefinderId": "2774476"
       }
     ],
-    "youtubeVideos": "Los Angeles Chinatown Summer Nights",
     "mapSmall": "/neighborhood/maps/central-city-west-map-small.jpg",
     "mapLarge": "/neighborhood/maps/ChinatownMapLarge.jpg",
-    "banner": "/neighborhood/Chinatown.jpg"
+    "banner": "/neighborhood/Chinatown.jpg",
+    "videos": [
+      {
+        "title": "Los Angeles Chinatown Summer Nights",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/xOXP66Bcg-s?si=CBnrdAUH98gcMxGf",
+        "thumbnailImage": "/videos/chinatown-thumbnail1.jpg"
+      },
+      {
+        "title": "The ORIGINALS w/ EMERIL at Philippe's",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/B-Ixr1s8TrE?si=X59szV18YosCWMsZ",
+        "thumbnailImage": "/videos/chinatown-thumbnail2.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Bunkerhill",
@@ -330,10 +353,21 @@
         "ihomefinderId": "2774641"
       }
     ],
-    "youtubeVideos": "Walt Disney Concert Hall Virtual Tour",
     "mapSmall": "/neighborhood/maps/Bunker_Hill_Map_small.jpg",
     "mapLarge": "/neighborhood/maps/BunkerHillMap.jpg",
-    "banner": "/neighborhood/BunkerHill.jpg"
+    "banner": "/neighborhood/BunkerHill.jpg",
+    "videos": [
+      {
+        "title": "Walt Disney Concert Hall Virtual Tour",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/tesyMHUgWBI?si=66FtttVD5d3GpbO9",
+        "thumbnailImage": "/videos/bunker-hill-thumbnail1.jpg"
+      },
+      {
+        "title": "L.A.'s Angels Flight reopens after setbacks",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/HpaApbZ4XKg?si=vOU5DAtWS6LO7lqn",
+        "thumbnailImage": "/videos/bunker-hill-thumbnail2.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Fashion District",
@@ -414,10 +448,21 @@
         "ihomefinderId": "2774999"
       }
     ],
-    "youtubeVideos": "Santee Village Lofts: Urban Life",
     "mapSmall": "/neighborhood/maps/fashion-district-map-small.jpg",
     "mapLarge": "/neighborhood/maps/FashionDistrictMap.jpg",
-    "banner": "/neighborhood/FashionDist.jpg"
+    "banner": "/neighborhood/FashionDist.jpg",
+    "videos": [
+      {
+        "title": "Santee Village Lofts: Urban Life",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/KaReYnXmttI?si=qg9qBszp_TzMCFZ_",
+        "thumbnailImage": "/videos/fashion-district-thumbnail1.jpg"
+      },
+      {
+        "title": "DISCOVER LA MART",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/PVzDdzMWFW4?si=FKnvOFCIzDUObSnY",
+        "thumbnailImage": "/videos/fashion-district-thumbnail2.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Financial District",
@@ -453,10 +498,21 @@
         "ihomefinderId": "2775000"
       }
     ],
-    "youtubeVideos": "The Biltmore Hotel Celebrates 100 Years",
     "mapSmall": "/neighborhood/maps/financial-district-map-small.jpg",
     "mapLarge": "/neighborhood/maps/FinancialDistrictMap.jpg",
-    "banner": "/neighborhood/FinanceDist.jpg"
+    "banner": "/neighborhood/FinanceDist.jpg",
+    "videos": [
+      {
+        "title": "The Biltmore Hotel Celebrates 100 Years",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/SU6DhEg0DHA?si=mD62N6WFc-48EtUt",
+        "thumbnailImage": "/videos/financial-district-thumbnail1.jpg"
+      },
+      {
+        "title": "The Map Librarian",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/KnSnmRvFIUg?si=-BqwMdiGIDaZV9uj",
+        "thumbnailImage": "/videos/financial-district-thumbnail1.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Historic Core",
@@ -597,10 +653,26 @@
         "ihomefinderId": "2774901"
       }
     ],
-    "youtubeVideos": "Downtown Los Angeles: 5th & Spring",
     "mapSmall": "/neighborhood/maps/historic-core-map-small.jpg",
     "mapLarge": "/neighborhood/maps/HistoricCoreMap.jpg",
-    "banner": "/neighborhood/HistoricCore.jpg"
+    "banner": "/neighborhood/HistoricCore.jpg",
+    "videos": [
+      {
+        "title": "Downtown Los Angeles: 5th & Spring",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/oAuxPsJ639E?si=0-5wJ23XZdtGANdW",
+        "thumbnailImage": "/videos/historic-core-thumbnail1.jpg"
+      },
+      {
+        "title": "St. Vincent Court",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/tyo6gUP2E8g?si=cLWSdUgd9aBPTQhL",
+        "thumbnailImage": "/videos/historic-core-thumbnail2.jpg"
+      },
+      {
+        "title": "Spring Arts Tower",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/fADPERffLVw?si=q2aG6GbDIM3GyDXB",
+        "thumbnailImage": "/videos/historic-core-thumbnail3.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "Little Tokyo",
@@ -681,10 +753,16 @@
         "ihomefinderId": "2774667"
       }
     ],
-    "youtubeVideos": "Little Tokyo's One Man Band",
     "mapSmall": "/neighborhood/maps/little-tokyo-map-small.jpg",
     "mapLarge": "/neighborhood/maps/LittleTokyoMap.jpg",
-    "banner": "/neighborhood/LittleTokyo.jpg"
+    "banner": "/neighborhood/LittleTokyo.jpg",
+    "videos": [
+      {
+        "title": "Little Tokyo's One Man Band",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/U_CRaUGQURQ?si=TPVcPaRfu4IdnInu",
+        "thumbnailImage": "/videos/little-tokyo-thumbnail1.jpg"
+      }
+    ]
   },
   {
     "neighborhood": "South Park",
@@ -813,6 +891,13 @@
     "youtubeVideos": "Discover Los Angeles: South Park",
     "mapSmall": "/neighborhood/maps/south-park-map-small.jpg",
     "mapLarge": "/neighborhood/maps/SouthParkMap.jpg",
-    "banner": "/neighborhood/Southpark.jpg"
+    "banner": "/neighborhood/Southpark.jpg",
+    "videos": [
+      {
+        "title": "Discover Los Angeles: South Park",
+        "youtubeIFrameUrl": "https://www.youtube.com/embed/wsS-OfJ_oyk?si=SG4vaB41yshdjL_a",
+        "thumbnailImage": "/videos/south-park-thumbnail1.jpg"
+      }
+    ]
   }
 ]
