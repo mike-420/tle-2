@@ -26,20 +26,19 @@ export default function BuildingDetails({
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`http://localhost:3000/api/neighborhoods`);
+      const res = await fetch(`https://tle-2.vercel.app/api/neighborhoods`);
       const data = await res.json();
 
       const neighborhood = data.find(
         (n: NeighborhoodInfo) => createSlug(n.neighborhood) === neighorhoodName
       );
       //   get the building name from that neighorhood
-      if (neighborhood) {
-        setBuilding(
-          neighborhood?.buildings?.find(
-            (b: BuildingInfo) => createSlug(b.buildingName) === buildingName
-          )
-        );
-      }
+
+      setBuilding(
+        neighborhood?.buildings?.find(
+          (b: BuildingInfo) => createSlug(b.buildingName) === buildingName
+        )
+      );
     })();
   }, []);
 
