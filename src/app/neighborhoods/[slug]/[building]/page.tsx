@@ -7,6 +7,7 @@ import { capitalizeWords, createSlug, slugToNormal } from "@/helper";
 import GreenLine from "@/components/GreenLine";
 import Script from "next/script";
 import { BuildingInfo, NeighborhoodInfo } from "@/helper/api";
+import { LoaderCircle } from "lucide-react";
 
 const Gretesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -59,8 +60,8 @@ export default function BuildingDetails({
 
   if (!building) {
     return (
-      <div className="bg-white min-h-screen grid items-center ">
-        Building details not found
+      <div className="bg-white min-h-screen w-full flex items-center justify-center ">
+        <LoaderCircle className="animate-spin w-20 h-20" />
       </div>
     );
   }
