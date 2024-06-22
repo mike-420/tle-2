@@ -25,20 +25,6 @@ export default function RootLayout({
         <Navbar />
         {children}
 
-        <Script
-          src="https://kestrel.idxhome.com/ihf-kestrel.js"
-          strategy="beforeInteractive"
-        />
-        <Script id="ihfKestrel-config" strategy="beforeInteractive">
-          {`
-          window.ihfKestrel = window.ihfKestrel || {};
-          ihfKestrel.config = {
-            platform: "",
-            activationToken: "3c138ce2-3451-454f-9ea1-e8b1620ab5eb",
-          };
-        `}
-        </Script>
-
         <Footer />
       </body>
     </html>

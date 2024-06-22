@@ -9,7 +9,7 @@ export interface BuildingInfo {
   securedparking: boolean;
   pool: boolean;
   gym: boolean;
-  buildingImage: "string";
+  buildingImage: string;
   totalUnits: number;
   year: string;
   millsAct: string;
@@ -17,12 +17,19 @@ export interface BuildingInfo {
   ihomefinderId: string;
 }
 
+export interface VideoInfo {
+  title: string;
+  youtubeIFrameUrl: string;
+  thumbnailImage: string;
+}
+
 export interface NeighborhoodInfo {
   neighborhood: string;
-  buildings?: BuildingInfo[];
-  youtubeVideos?: string;
-  mapLarge?: string;
-  banner?: string;
+  buildings: BuildingInfo[];
+  mapLarge: string;
+  mapSmall: string;
+  banner: string;
+  videos: VideoInfo[];
 }
 
 export async function fetchNeighborhoodData(): Promise<NeighborhoodInfo[]> {

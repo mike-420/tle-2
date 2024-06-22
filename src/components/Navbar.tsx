@@ -1,36 +1,132 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { KeyboardEvent, useEffect, useState } from "react";
+import { Bricolage_Grotesque } from "next/font/google";
 
 const navData = ["Residential Buildings", "Neighborhoods", "About", "Contact"];
 
+const Gretesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [skipVisible, setSkipVisible] = useState(false);
+  const [tabCount, setTabCount] = useState(0);
+
+  const handleMenuClick = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    const handleTabPress = (event: KeyboardEvent<Document>) => {
+      if (event.key === "Tab") {
+        setTabCount((prevTabCount) => prevTabCount + 1);
+        if (tabCount === 0) {
+          setSkipVisible(true);
+        } else if (tabCount === 1) {
+          setSkipVisible(false);
+          document.getElementById("logo")?.focus();
+          event.preventDefault();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleTabPress as any);
+
+    return () => {
+      document.removeEventListener("keydown", handleTabPress as any);
+    };
+  }, [tabCount]);
+
+  const handleSkipFocus = () => {
+    setSkipVisible(true);
+  };
+
+  const handleSkipBlur = () => {
+    setSkipVisible(false);
+  };
+
+  const handleSkipEnter = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === "Enter") {
+      // Move the page down by 150px
+      window.scrollBy({
+        top: 150,
+        behavior: "smooth", // Optional: smooth scrolling animation
+      });
+
+      // Optionally, focus on a specific element after scrolling
+      document.getElementById("facebook-icon")?.focus();
+
+      event.preventDefault();
+    }
+  };
+
   return (
     <header className="w-full bg-white">
-      <div className="w-full flex items-center justify-between h-[100px] max-w-screen-1440px px-4 sm:px-6 lg:px-10  gap-10 ">
-        <Link href="/">
+      <div className="relative w-full flex justify-between max-md:h-[80px] h-[100px] max-w-screen-1440px px-4 sm:px-6 lg:px-10 gap-10">
+        <button
+          className={`skip-to-content ${skipVisible ? "visible" : ""}`}
+          tabIndex={1}
+          id="skip-to-content"
+          onFocus={handleSkipFocus}
+          onBlur={handleSkipBlur}
+          onKeyDown={handleSkipEnter}
+        >
+          Skip to content
+        </button>
+        <Link href="/" className="flex justify-center items-center ">
           <Image
+            id="logo"
             src={"/logo.png"}
-            alt="Logo"
+            alt="The Loft Exchange logo"
             width={140}
             height={78}
-            className="max-md:w-[100px] max-md:h-[50px] "
+            className="max-md:w-[100px] max-md:h-[50px] focus-visible:p-2 "
+            tabIndex={2}
           />
         </Link>
-        <div className="lg:w-3/4 md:flex items-center justify-end h-full gap-12 w-full hidden">
-          {navData.map((nav, index) => {
-            return (
-              <Link
-                href={`/${nav.toLowerCase()}`}
-                className="lg:text-xl text-lg lg:leading-6 text-center text-black"
-                key={index}
-              >
-                {nav}
-              </Link>
-            );
-          })}
+        <div className="md:flex items-end pb-3 justify-end h-full gap-12 w-full hidden">
+          {navData.map((nav, index) => (
+            <Link
+              href={`/${nav.toLowerCase().replace(" ", "-")}`}
+              className="lg:text-lg text-base lg:leading-6 text-center text-black p-2 "
+              key={index}
+              tabIndex={3 + index}
+            >
+              {nav}
+            </Link>
+          ))}
+        </div>
+        <div
+          className="hidden max-md:flex cursor-pointer"
+          onClick={handleMenuClick}
+        >
+          <Image
+            src="/icons/hamburger.svg"
+            alt="hamburger-menu"
+            width={32}
+            height={32}
+          />
         </div>
       </div>
+
+      {/* Mobile nav when menu is open */}
+      {isMenuOpen && (
+        <nav
+          className={`bg-white py-4 pb-8 flex flex-col items-center justify-center gap-4 text-black ${Gretesque.className} transform transition-transform duration-300 ease-out`}
+        >
+          {navData.map((item, index) => (
+            <li className="list-none" key={index}>
+              <Link href={`/${item.toLowerCase().replace(" ", "-")}`}>
+                {item}
+              </Link>
+            </li>
+          ))}
+        </nav>
+      )}
     </header>
   );
 };
