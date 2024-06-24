@@ -123,8 +123,8 @@
         "ihomefinderId": "2774840"
       }
     ],
-    "mapSmall": "/neighborhood/maps/arts-district-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/ArtDisctricMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/arts-district-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/arts-district-map-large.jpg",
     "banner": "/neighborhood/ArtsDistrict.jpg",
     "videos": [
       {
@@ -168,8 +168,8 @@
         "ihomefinderId": "2775069"
       }
     ],
-    "mapSmall": "/neighborhood/maps/central-city-west-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/CentralCityWest.jpg",
+    "mapSmall": "/neighborhood/maps/Small/central-city-west-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/central-city-west-large.jpg",
     "banner": "/neighborhood/CentralCityWest.jpg",
     "videos": [
       {
@@ -288,8 +288,8 @@
         "ihomefinderId": "2774476"
       }
     ],
-    "mapSmall": "/neighborhood/maps/central-city-west-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/ChinatownMapLarge.jpg",
+    "mapSmall": "/neighborhood/maps/Small/chinatown-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/chinatown-map-large.jpg",
     "banner": "/neighborhood/Chinatown.jpg",
     "videos": [
       {
@@ -353,8 +353,8 @@
         "ihomefinderId": "2774641"
       }
     ],
-    "mapSmall": "/neighborhood/maps/Bunker_Hill_Map_small.jpg",
-    "mapLarge": "/neighborhood/maps/BunkerHillMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/bunker-hill-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/bunker-hill-map-large.jpg",
     "banner": "/neighborhood/BunkerHill.jpg",
     "videos": [
       {
@@ -448,8 +448,8 @@
         "ihomefinderId": "2774999"
       }
     ],
-    "mapSmall": "/neighborhood/maps/fashion-district-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/FashionDistrictMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/fashion-district-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/fashion-district-map-large.jpg",
     "banner": "/neighborhood/FashionDist.jpg",
     "videos": [
       {
@@ -498,8 +498,8 @@
         "ihomefinderId": "2775000"
       }
     ],
-    "mapSmall": "/neighborhood/maps/financial-district-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/FinancialDistrictMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/financial-district-map-smal.jpg",
+    "mapLarge": "/neighborhood/maps/Large/fashion-district-map-large.jpg",
     "banner": "/neighborhood/FinanceDist.jpg",
     "videos": [
       {
@@ -653,8 +653,8 @@
         "ihomefinderId": "2774901"
       }
     ],
-    "mapSmall": "/neighborhood/maps/historic-core-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/HistoricCoreMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/historic-core-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/historic-core-map-large.jpg",
     "banner": "/neighborhood/HistoricCore.jpg",
     "videos": [
       {
@@ -753,8 +753,8 @@
         "ihomefinderId": "2774667"
       }
     ],
-    "mapSmall": "/neighborhood/maps/little-tokyo-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/LittleTokyoMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/little-tokyo-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/little-tokyo-map-large.jpg",
     "banner": "/neighborhood/LittleTokyo.jpg",
     "videos": [
       {
@@ -889,8 +889,8 @@
       }
     ],
     "youtubeVideos": "Discover Los Angeles: South Park",
-    "mapSmall": "/neighborhood/maps/south-park-map-small.jpg",
-    "mapLarge": "/neighborhood/maps/SouthParkMap.jpg",
+    "mapSmall": "/neighborhood/maps/Small/south-park-map-small.jpg",
+    "mapLarge": "/neighborhood/maps/Large/south-park-map-large.jpg",
     "banner": "/neighborhood/Southpark.jpg",
     "videos": [
       {

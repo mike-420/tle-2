@@ -39,7 +39,12 @@ export default async function NeighborhoodPage({
     (item) => createSlug(item.neighborhood) !== params.slug
   );
 
-  console.log(neighborhood.buildings);
+  let tabCount = 11;
+  const mapTabIndex = neighborhood.buildings.length + tabCount;
+  const videoTabIndex = mapTabIndex + 1;
+  const otherBuildingsTabIndex = videoTabIndex + neighborhood.videos.length;
+
+  // console.log(neighborhood.buildings);
   return (
     <div className={`bg-white min-h-[150vh] text-black ${Gretesque.className}`}>
       <div>
@@ -49,12 +54,12 @@ export default async function NeighborhoodPage({
           <img
             src={neighborhood.banner}
             alt={`The ${neighborhood.neighborhood} neighborhood"`}
-            className="object-cover max-h-[380px] w-full max-w-[2500px] mx-auto"
+            className="object-cover max-h-[410px] w-full max-w-[2500px] mx-auto"
           />
 
           <h1
-            className={`absolute uppercase inset-0 text-white text-stroke-black drop-shadow-sm tracking-wider
-               flex items-center justify-center text-center text-6xl max-sm:text-4xl font-bold ${libre.className}`}
+            className={`absolute uppercase inset-0 text-white text-stroke-black tracking-wider
+             text-with-shadow flex items-center justify-center text-center text-6xl max-sm:text-3xl font-bold ${libre.className}`}
           >
             {neighborhood.neighborhood}
           </h1>
@@ -62,8 +67,8 @@ export default async function NeighborhoodPage({
 
         <GreenLine />
       </div>
-      <div className="max-w-screen-1440px mx-auto px-4 sm:px-6 lg:px-10 flex flex-col gap-4 w-full">
-        <div className="py-5 max-md:py-3 w-full flex max-md:flex-col items-start justify-between max-md:gap-4 gap-6 ">
+      <div className="max-w-screen-1440px mx-auto px-4 sm:px-6 lg:px-14 flex flex-col gap-4 pb-20 w-full">
+        <div className="py-5 max-md:py-3 w-full flex max-md:flex-col items-start justify-between gap-6 ">
           <p
             className={`text-black ${Gretesque.className} max-sm:text-sm font-light leading-[22px]`}
           >
@@ -83,7 +88,7 @@ export default async function NeighborhoodPage({
 
           <div className="flex items-center justify-center gap-4">
             <span className="text-gray-600"> Share: </span>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 max-sm:gap-6">
               {["facebook", "linkedin", "instagram", "twitter"].map(
                 (social, index) => (
                   <Image
@@ -104,7 +109,7 @@ export default async function NeighborhoodPage({
 
         <div className="flex gap-6">
           {/* Left sidebar */}
-          <aside className="max-md:hidden flex flex-col gap-4 max-w-[160px] mt-16">
+          <aside className="max-md:hidden flex flex-col gap-4 max-w-[160px] mt-24">
             <h3
               className={`text-lg text-gray-600 font-medium ${Gretesque.className}`}
             >
@@ -118,7 +123,7 @@ export default async function NeighborhoodPage({
                     .replace(/\s+/g, "-")}`}
                   key={index}
                   className="text-gray-900 py-2 text-sm hover:text-[#555555] transition-colors"
-                  tabIndex={-1}
+                  tabIndex={otherBuildingsTabIndex + index}
                 >
                   {other.neighborhood}
                 </Link>
@@ -127,17 +132,16 @@ export default async function NeighborhoodPage({
           </aside>
 
           {/* Main content */}
-          <div className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-9">
+          <div className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-8">
             <h1
-              className={`uppercase max-sm:text-xl text-2xl font-medium leading-9 text-gray-900 ${Gretesque.className}`}
+              className={` max-sm:text-xl text-2xl font-bold leading-9 text-gray-900 ${Gretesque.className}`}
             >
               Lofts and Condos in {neighborhood.neighborhood}
             </h1>
-            <div className="text-lg flex flex-col gap-10  text-black">
+            <div className="text-lg flex flex-col gap-4  text-black">
               {neighborhood.buildings?.map((building, index) => {
                 // to keep record of tabIndex for each building card
-                let tabCount = 11 + index;
-                console.log(tabCount);
+                tabCount = index + 11;
                 return (
                   <Link
                     href={`/neighborhoods/${createSlug(
@@ -145,57 +149,50 @@ export default async function NeighborhoodPage({
                     )}/${createSlug(building.buildingName)}`}
                     className="grid grid-cols-3 min-h-[153px] rounded-lg shadow-sm"
                     key={index}
-                    tabIndex={-1}
+                    tabIndex={tabCount}
                   >
                     <div className="flex flex-col gap-1.5">
-                      <span className={`opacity-0 ${Gretesque.className}`}>
-                        Building
-                      </span>
+                      {index === 0 && (
+                        <span className={`opacity-0 ${Gretesque.className}`}>
+                          Building
+                        </span>
+                      )}
                       <img
                         src={building.buildingImage}
                         alt={`Exterior of ${building.buildingName}`}
-                        className="rounded-l-lg object-cover w-full h-full "
+                        className="rounded-l-lg object-cover w-full h-[153px] border border-[#555555] "
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <span
-                        className={`font-medium text-black text-center ${Gretesque.className}`}
-                      >
-                        Building
-                      </span>
-                      <div className="border-y-[1.5px] px-1 flex flex-1 items-center justify-center">
-                        <h4
-                          className="font-semibold max-sm:text-sm text-center text-[#333]"
-                          tabIndex={tabCount}
+                      {index === 0 && (
+                        <span
+                          className={`px-4 font-semibold text-left text-black ${Gretesque.className}`}
                         >
+                          Building
+                        </span>
+                      )}
+                      <div className="border-y border-[#555555] px-4 flex flex-1 items-center">
+                        <h4 className="font-semibold text-base max-sm:text-sm text-left text-[#333]">
                           {building.buildingName}
                         </h4>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <span
-                        className={`font-medium text-black text-center ${Gretesque.className}`}
-                      >
-                        Amenities
-                      </span>
-                      <div className="border-[1.5px] flex flex-col gap-y-4 px-1 flex-1 items-center justify-center rounded-r-lg">
+                      {index === 0 && (
+                        <span
+                          className={`px-4 font-semibold text-black text-left ${Gretesque.className}`}
+                        >
+                          Amenities
+                        </span>
+                      )}
+                      <div className="relative border-y border-r border-[#555555] flex flex-col gap-y-4 px-4 flex-1 justify-center rounded-r-lg">
+                        <div className="absolute left-0 w-[1px] h-[117px] bg-[#555555] "></div>
                         <div className="flex items-center gap-x-6">
-                          {building.pool && (
-                            <div tabIndex={tabCount}>
-                              <PoolIcon />
-                            </div>
-                          )}
-                          {building.gym && (
-                            <div tabIndex={tabCount}>
-                              <GymIcon />
-                            </div>
-                          )}
+                          {building.pool && <PoolIcon />}
+                          {building.gym && <GymIcon />}
                         </div>
                         {building.securedparking && (
-                          <p
-                            className="text-[#333] max-sm:text-sm"
-                            tabIndex={tabCount}
-                          >
+                          <p className="text-[#333] text-base max-sm:text-sm">
                             Secured Parking
                           </p>
                         )}
@@ -223,12 +220,13 @@ export default async function NeighborhoodPage({
                       quality={100}
                       width={400}
                       height={300}
+                      tabIndex={mapTabIndex}
                     />
                   </div>
                 </DialogTrigger>
                 <DialogContent className="w-screen">
                   <DialogHeader>
-                    <DialogDescription className="">
+                    <DialogDescription className="  ">
                       <Image
                         src={neighborhood.mapLarge}
                         alt={`${neighborhood.neighborhood} map`}
@@ -261,6 +259,8 @@ export default async function NeighborhoodPage({
                           width={400}
                           height={400}
                           quality={100}
+                          className=" object-cover rounded-lg"
+                          tabIndex={mapTabIndex}
                         />
                         <Image
                           src={"/icons/play.svg"}
@@ -274,7 +274,7 @@ export default async function NeighborhoodPage({
                     <DialogContent>
                       <DialogHeader>
                         <DialogDescription className="">
-                          <div className="w-full flex items-center justify-center  ">
+                          <div className="w-full flex items-center justify-center ">
                             <iframe
                               width="460"
                               height="400"
@@ -282,6 +282,7 @@ export default async function NeighborhoodPage({
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                               title={video.title}
+                              className="p-1"
                             ></iframe>
                           </div>
                         </DialogDescription>
