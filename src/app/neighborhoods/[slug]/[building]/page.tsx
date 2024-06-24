@@ -26,7 +26,7 @@ export default function BuildingDetails({
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`${process.env.PUBLIC_DOMAIN}/api/neighborhoods`);
+      const res = await fetch(`https://tle-2.vercel.app/api/neighborhoods`);
       const data = await res.json();
 
       const neighborhood = data.find(
@@ -119,7 +119,7 @@ export default function BuildingDetails({
         </div>
 
         {/* Building Details section */}
-        <div className="space-y-12">
+        <section className="space-y-12">
           <div className={`mt-8 text-black w-full ${Gretesque.className}`}>
             <h2 className="text-2xl font-semibold">Building Details</h2>
             <div className="mt-6 flex max-sm:flex-col flex-wrap gap-20 max-sm:gap-6">
@@ -178,7 +178,7 @@ export default function BuildingDetails({
           };
         `}
           </Script>
-        </div>
+        </section>
       </div>
     </div>
   );

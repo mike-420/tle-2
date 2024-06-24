@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Script from "next/script";
 
 const libre = Libre_Baskerville({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -23,7 +22,7 @@ export default function RootLayout({
       <body className={libre.className}>
         <GoogleTagManager gtmId="GTM-5T54LP6N" />
         <Navbar />
-        {children}
+        <main>{children}</main>
 
         <Footer />
       </body>

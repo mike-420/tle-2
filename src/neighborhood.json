@@ -139,7 +139,7 @@
     "buildings": [
       {
         "buildingName": "1100 Wilshire Lofts",
-        "streetAddress": "unknown",
+        "streetAddress": "1100 Wilshire Blvd, Los Angeles, CA 90017",
         "zipCode": null,
         "area": "Central City West",
         "securedparking": true,
@@ -154,7 +154,7 @@
       },
       {
         "buildingName": "Vero",
-        "streetAddress": "unknown",
+        "streetAddress": "1234 Wilshire Blvd, Los Angeles, CA 90017",
         "zipCode": null,
         "area": "Central City West",
         "securedparking": true,
