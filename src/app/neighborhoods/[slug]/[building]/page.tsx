@@ -26,7 +26,7 @@ export default function BuildingDetails({
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`https://tle-2.vercel.app/api/neighborhoods`);
+      const res = await fetch(`${process.env.PUBLIC_DOMAIN}/api/neighborhoods`);
       const data = await res.json();
 
       const neighborhood = data.find(
@@ -73,21 +73,19 @@ export default function BuildingDetails({
           <img
             src={building.buildingImage}
             alt={createSlug(building.buildingName)}
-            className="object-cover max-h-[380px] w-full max-w-[2500px] mx-auto"
+            className="object-cover max-h-[410px] w-full max-w-[2500px] mx-auto"
           />
         </div>
         <GreenLine />
       </div>
-      <div className="max-w-screen-1440px px-4 sm:px-6 lg:px-10 relative pb-12">
-        <div className="w-full flex items-center justify-between gap-6 text-black py-3 border-b">
-          <h1 className="text-xl max-sm:text-lg font-semibold">
-            {building.buildingName}
-          </h1>
-          <p className="max-sm:text-sm text-gray-600">
-            {building.streetAddress}
-          </p>
-        </div>
+      <div className="w-full flex items-center justify-between gap-6 text-black py-3 border-b-[1.5px] px-4 sm:px-6 lg:px-14 !border-[#888888 ] ">
+        <h1 className="text-xl max-sm:text-lg font-semibold">
+          {building.buildingName}
+        </h1>
+        <p className="max-sm:text-sm text-gray-600">{building.streetAddress}</p>
+      </div>
 
+      <div className="max-w-screen-1440px px-4 sm:px-6 lg:px-14 relative pb-12">
         <div className="py-5 max-md:py-3 w-full flex max-md:flex-col items-start justify-between max-md:gap-4 gap-6 ">
           <p
             className={`text-black ${Gretesque.className} max-sm:text-sm font-light leading-[22px]`}
@@ -121,68 +119,67 @@ export default function BuildingDetails({
         </div>
 
         {/* Building Details section */}
-        <div className={`mt-8 text-black w-full ${Gretesque.className}`}>
-          <h2 className="text-2xl font-semibold">Building Details</h2>
-          <div className="mt-6 flex max-sm:flex-col flex-wrap gap-20 max-sm:gap-6">
-            {/* Col 1 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 w-full ">
-                <span className="font-semibold">Neighborhood:</span>{" "}
-                <span>{building.area}</span>
-              </div>
-              <div className="flex items-center gap-2 w-full">
-                <span className="font-semibold"># of Units in Building:</span>{" "}
-                <span>{building.totalUnits}</span>
-              </div>
-              <div className="flex items-center gap-2 w-full">
-                <span className="font-semibold">Yr. Built/redeveloped:</span>{" "}
-                <span>{building.year}</span>
-              </div>
-            </div>
-            {/* Col 2 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 w-full">
-                <span className="font-semibold">Mills Act:</span>{" "}
-                <span>{capitalizeWords(building.millsAct)}</span>
-              </div>
-              <div className="flex items-center gap-2 w-full">
-                <span className="font-semibold">Pet Friendly:</span>{" "}
-                <span>{capitalizeWords(building.petFriendly)}</span>
-              </div>
-              <div className="flex items-center gap-2 w-full">
-                <span className="font-semibold">Secured Parking</span>
-              </div>
-            </div>
-            {/* Col 3 */}
-            <div className="space-y-4">
-              {building.pool && (
-                <div className="flex items-center gap-2 w-full">
-                  <span className="font-semibold">Pool</span>
+        <div className="space-y-12">
+          <div className={`mt-8 text-black w-full ${Gretesque.className}`}>
+            <h2 className="text-2xl font-semibold">Building Details</h2>
+            <div className="mt-6 flex max-sm:flex-col flex-wrap gap-20 max-sm:gap-6">
+              {/* Col 1 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 w-full ">
+                  <span className="font-semibold">Neighborhood:</span>{" "}
+                  <span>{building.area}</span>
                 </div>
-              )}
-              {building.gym && (
                 <div className="flex items-center gap-2 w-full">
-                  <span className="font-semibold">Fitness Center</span>
+                  <span className="font-semibold"># of Units in Building:</span>{" "}
+                  <span>{building.totalUnits}</span>
                 </div>
-              )}
+                <div className="flex items-center gap-2 w-full">
+                  <span className="font-semibold">Yr. Built/redeveloped:</span>{" "}
+                  <span>{building.year}</span>
+                </div>
+              </div>
+              {/* Col 2 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 w-full">
+                  <span className="font-semibold">Mills Act:</span>{" "}
+                  <span>{capitalizeWords(building.millsAct)}</span>
+                </div>
+                <div className="flex items-center gap-2 w-full">
+                  <span className="font-semibold">Pet Friendly:</span>{" "}
+                  <span>{capitalizeWords(building.petFriendly)}</span>
+                </div>
+                <div className="flex items-center gap-2 w-full">
+                  <span className="font-semibold">Secured Parking</span>
+                </div>
+              </div>
+              {/* Col 3 */}
+              <div className="space-y-4">
+                {building.pool && (
+                  <div className="flex items-center gap-2 w-full">
+                    <span className="font-semibold">Pool</span>
+                  </div>
+                )}
+                {building.gym && (
+                  <div className="flex items-center gap-2 w-full">
+                    <span className="font-semibold">Fitness Center</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div
-        id="real-estate-widget"
-        className="max-w-screen-1440px px-4 sm:px-6 lg:px-10"
-      ></div>
-      <Script id="ihfKestrel-config" strategy="beforeInteractive">
-        {`
+          <div id="real-estate-widget"></div>
+          <Script id="ihfKestrel-config" strategy="beforeInteractive">
+            {`
           window.ihfKestrel = window.ihfKestrel || {};
           ihfKestrel.config = {
             platform: '',
             activationToken: '3c138ce2-3451-454f-9ea1-e8b1620ab5eb',
           };
         `}
-      </Script>
+          </Script>
+        </div>
+      </div>
     </div>
   );
 }
