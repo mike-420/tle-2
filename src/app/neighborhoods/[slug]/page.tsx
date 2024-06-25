@@ -132,7 +132,7 @@ export default async function NeighborhoodPage({
           </aside>
 
           {/* Main content */}
-          <div className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-8">
+          <section className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-8">
             <h1
               className={` max-sm:text-xl text-2xl font-bold leading-9 text-gray-900 ${Gretesque.className}`}
             >
@@ -202,7 +202,7 @@ export default async function NeighborhoodPage({
                 );
               })}
             </div>
-          </div>
+          </section>
 
           {/* Right sidebar */}
           <aside className="w-[250px] max-lg:hidden xl:w-[300px] flex flex-col gap-10 mt-16">
