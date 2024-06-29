@@ -1,5 +1,11 @@
+import { Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 import React from "react";
+
+const SourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const BlogCard = () => {
   return (
@@ -28,14 +34,20 @@ const BlogCard = () => {
 
 const Blog = ({ noTitle }: { noTitle?: boolean }) => {
   return (
-    <div className="flex flex-col gap-[60px] items-center justify-center mt-[130px]">
-      {!noTitle && <h1 className="text-[32px] leading-10 text-black">Blog</h1>}
-      <div className="max-w-[1240px] mx-auto flex flex-wrap items-center justify-center lg:grid lg:grid-cols-3 gap-8">
+    <section className="md:px-16 py-16 flex flex-col items-center justify-center px-4 sm:px-12  max-sm:py-12 ">
+      {!noTitle && (
+        <h1
+          className={`text-[32px] max-sm:text-[28px] font-semibold leading-10 text-black ${SourceSans.className}`}
+        >
+          My Blog
+        </h1>
+      )}
+      <div className="max-w-[1240px] mt-16 max-sm:mt-12 mx-auto flex flex-wrap items-center justify-center lg:grid lg:grid-cols-3 gap-8">
         <BlogCard />
         <BlogCard />
         <BlogCard />
       </div>
-    </div>
+    </section>
   );
 };
 

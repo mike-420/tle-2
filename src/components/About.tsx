@@ -9,16 +9,17 @@ const SourceSans = Source_Sans_3({
 
 const About = () => {
   return (
-    <div className="max-w-screen-1440px mx-auto px-4 sm:px-12 md:px-16 lg:pl-[115px] lg:pr-[154px] pt-[73px] pb-[129px]">
+    <section className="max-w-[1440px] mx-auto px-4 sm:px-12 md:px-16 py-16 max-sm:py-12 ">
       <div className="flex flex-col gap-11">
-        <h1 className="text-[30px] leading-9 text-black uppercase">ABOUT</h1>
-        <div className="flex gap-12 lg:gap-20 lg:flex-row flex-col items-center">
-          <div className="flex gap-9 flex-col max-w-[675px] w-full">
-            <h1 className="text-[44px] leading-[54px] text-black">
-              Roxanna Godinez
-            </h1>
+        <div className="flex gap-12 lg:gap-20 max-lg:flex-col items-center justify-center ">
+          <div className="flex gap-9 flex-col max-w-[650px] w-full flex-1">
+            <h2
+              className={`${SourceSans.className} text-[44px] max-sm:font-medium max-lg:text-center leading-[55px] text-black`}
+            >
+              About Me
+            </h2>
             <p
-              className={`font-light text-[28px] leading-[54px] text-black ${SourceSans.className}`}
+              className={`font-light lg:mt-3 text-[23px] max-sm:text-[20px] max-sm:leading-[38px] leading-[48px] max-lg:text-center text-black ${SourceSans.className}`}
             >
               This business is an organic business, changing, adapting and
               growing and experience is a key element and so it&apos;s
@@ -29,28 +30,31 @@ const About = () => {
               I am that real estate consultant you have been looking for quite
               some time.{" "}
             </p>
-            <p className={`text-2xl text-black ${SourceSans.className}`}>
-              Roxanna Godinez <br /> Realtor® <br /> Loftway <br /> Broker
-              license #01897934
-            </p>
+
+            <div className="text-xl max-sm:text-base max-sm:space-y-2 max-lg:text-center font-semibold space-y-4 ">
+              <p>Roxanna Godinez</p>
+              <p>Realtor®</p>
+              <p>Loftway</p>
+              <p>Broker license #01897934</p>
+            </div>
           </div>
-          <div className="flex flex-col gap-9 mt-14">
+          <div className="flex flex-col gap-9">
             <Image
               src={"/rox.jpeg"}
               alt="Roxanne"
               width={410}
-              height={510}
-              className="object-cover max-h-[510px]"
+              height={600}
+              className="object-cover max-h-[550px] rounded-lg"
             />
             <button
-              className={`text-[#555555] ${SourceSans.className} py-5 uppercase max-w-[411px] w-full flex items-center justify-center text-2xl leading-[30px] bg-white border border-[#CCCCCC] rounded-lg`}
+              className={`text-[#555555] ${SourceSans.className} py-5 uppercase w-full flex items-center justify-center text-2xl leading-[30px] bg-white border border-[#888888] rounded-lg`}
             >
               Contact Roxanna
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

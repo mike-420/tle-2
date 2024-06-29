@@ -8,7 +8,7 @@ const SourceSans = Source_Sans_3({
 
 const Subscribe = () => {
   return (
-    <section className="pt-[164px] pb-[122px] max-w-screen-1440px mx-auto flex items-center justify-center flex-col gap-3.5 sm:px-12 px-4">
+    <section className="py-16 max-sm:py-12 max-w-[1440px] mx-auto flex items-center justify-center flex-col gap-3.5 px-4 sm:px-6 lg:px-14">
       <h1
         className={`${SourceSans.className} font-light text-black text-[32px] leading-[45px]`}
       >
