@@ -78,17 +78,17 @@ export default function BuildingDetails({
         </div>
         <GreenLine />
       </div>
-      <div className="w-full flex items-center justify-between gap-6 text-black py-3 border-b-[1.5px] px-4 sm:px-6 lg:px-14 !border-[#888888 ] ">
+      <div className="max-w-[1440px] mx-auto w-full flex max-sm:flex-col max-sm:items-start items-center justify-between max-sm:gap-2 gap-6 text-black py-3 border-b-[1.5px] px-4 sm:px-6 lg:px-14 !border-[#888888 ] ">
         <h1 className="text-xl max-sm:text-lg font-semibold">
           {building.buildingName}
         </h1>
-        <p className="max-sm:text-sm text-gray-600">{building.streetAddress}</p>
+        <p className="max-sm:text-sm text-gray-600">{`${building.streetAddress}, Los Angeles, CA, ${building.zipCode}`}</p>
       </div>
 
-      <div className="max-w-screen-1440px px-4 sm:px-6 lg:px-14 relative pb-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14 relative pb-12">
         <div className="py-5 max-md:py-3 w-full flex max-md:flex-col items-start justify-between max-md:gap-4 gap-6 ">
           <p
-            className={`text-black ${Gretesque.className} max-sm:text-sm font-light leading-[22px]`}
+            className={`text-black ${Gretesque.className} max-sm:text-xs font-light leading-[22px]`}
           >
             <Link href="/">Home</Link> {">"}{" "}
             <Link href="/neighborhoods">Downtown Neighborhoods</Link> {">"}{" "}

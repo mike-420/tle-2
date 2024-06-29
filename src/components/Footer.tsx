@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 const Footer = () => {
   return (
-    <footer className=" py-[66px] bg-black min-h-[326px] flex ">
-      <div className="flex md:flex-row md:gap-0 gap-20 max-md:gap-8 flex-col justify-between flex-1 max-w-screen-1440px px-4 sm:px-6 lg:px-14">
+    <footer className="  py-16 max-sm:py-12 bg-black min-h-[326px] flex ">
+      <div className="flex md:flex-row md:gap-0 gap-20 max-md:gap-8 flex-col justify-between flex-1 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14">
         <div className="flex flex-col gap-4 justify-between">
           <Image
             src={"/footer.gif"}

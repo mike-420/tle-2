@@ -1,3 +1,4 @@
+import FeaturedListings from "@/components/FeaturedListings";
 import About from "../components/About";
 import Blog from "../components/Blog";
 import Neighborhoods from "../components/Neighborhoods";
@@ -7,17 +8,14 @@ import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pb-16">
       <Slider />
-      <div className="mt-[68px] mb-[61px] flex flex-col items-center gap-10">
-        <h2 className="text-4xl leading-10 text-black text-center">
+      <div className="mt-[68px] flex flex-col items-center gap-10">
+        <h1 className="text-4xl leading-10 text-black text-center">
           Welcome to the <br /> neighborhood!
-        </h2>
-        <h6 className="text-[26px] leading-9 text-black text-center">
-          Featured Listings
-        </h6>
+        </h1>
       </div>
-      <div className="h-[563px] text-black">ihomefinder</div>
+      <FeaturedListings />
       <About />
       <ResidentialBuildings />
       <Neighborhoods />

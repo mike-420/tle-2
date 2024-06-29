@@ -1,6 +1,6 @@
 "use client";
 import { Source_Sans_3 } from "next/font/google";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GreenLine from "./GreenLine";
 
 const data = [
@@ -38,9 +38,20 @@ const SourceSans = Source_Sans_3({
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      showNextImage();
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
+
+  function showNextImage() {
+    setCurrentSlide((index) => {
+      if (index === data?.length - 1) return 0;
+      return index + 1;
+    });
+  }
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -52,16 +63,16 @@ const Slider = () => {
         {data.map((slide, index) => (
           <div
             key={index}
-            className="relative w-full h-[566px] flex-shrink-0 bg-cover bg-center"
+            className="relative w-full h-[566px] max-sm:h-[420px] flex-shrink-0 bg-cover bg-center  "
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             {currentSlide === index && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-10">
-                <h1
-                  className={`${SourceSans.className} text-3xl text-white capitalize leading-10 text-center`}
+              <div className="absolute left-1/2 -translate-x-1/2 max-sm:top-8 top-10">
+                <h4
+                  className={`${SourceSans.className} min-w-[200px] w-full text-3xl max-sm:text-2xl text-white capitalize leading-10 text-center`}
                 >
                   {slide.title}
-                </h1>
+                </h4>
               </div>
             )}
           </div>
@@ -73,8 +84,8 @@ const Slider = () => {
         {data.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-8 h-8 rounded-full ${
+            onClick={showNextImage}
+            className={`w-6 h-6 max-sm:w-5 max-sm:h-5 max-lg:h-6 max-lg:w6 rounded-full border border-[#8c9940] ${
               currentSlide === index ? "bg-[#8C9940]" : "bg-[#E8E8E8]"
             }`}
           ></button>

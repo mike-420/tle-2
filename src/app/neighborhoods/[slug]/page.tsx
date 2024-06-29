@@ -67,7 +67,7 @@ export default async function NeighborhoodPage({
 
         <GreenLine />
       </div>
-      <div className="max-w-screen-1440px mx-auto px-4 sm:px-6 lg:px-14 flex flex-col gap-4 pb-20 w-full">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14 flex flex-col gap-4 pb-20 w-full">
         <div className="py-5 max-md:py-3 w-full flex max-md:flex-col items-start justify-between gap-6 ">
           <p
             className={`text-black ${Gretesque.className} max-sm:text-sm font-light leading-[22px]`}
@@ -138,7 +138,7 @@ export default async function NeighborhoodPage({
             >
               Lofts and Condos in {neighborhood.neighborhood}
             </h1>
-            <div className="text-lg flex flex-col gap-4  text-black">
+            <div className="text-lg flex flex-col items-center justify-center gap-4  text-black">
               {neighborhood.buildings?.map((building, index) => {
                 // to keep record of tabIndex for each building card
                 tabCount = index + 11;
@@ -160,7 +160,7 @@ export default async function NeighborhoodPage({
                       <img
                         src={building.buildingImage}
                         alt={`Exterior of ${building.buildingName}`}
-                        className="rounded-l-lg object-cover w-full h-[153px] border border-[#555555] "
+                        className="rounded-l-lg object-cover h-[153px] w-[220px] border border-[#555555] "
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
@@ -187,10 +187,14 @@ export default async function NeighborhoodPage({
                       )}
                       <div className="relative border-y border-r border-[#555555] flex flex-col gap-y-4 px-4 flex-1 justify-center rounded-r-lg">
                         <div className="absolute left-0 w-[1px] h-[117px] bg-[#555555] "></div>
-                        <div className="flex items-center gap-x-6">
-                          {building.pool && <PoolIcon />}
-                          {building.gym && <GymIcon />}
-                        </div>
+                        {building.pool ||
+                          (building.gym && (
+                            <div className="flex items-center gap-x-6">
+                              {building.pool && <PoolIcon />}
+                              {building.gym && <GymIcon />}
+                            </div>
+                          ))}
+
                         {building.securedparking && (
                           <p className="text-[#333] text-base max-sm:text-sm">
                             Secured Parking

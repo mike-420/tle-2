@@ -68,8 +68,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-white">
-      <div className="relative w-full flex justify-between max-md:h-[80px] h-[100px] max-w-screen-1440px px-4 sm:px-6 lg:px-14 gap-10">
+    <header className="w-full bg-white max-w-[1440px] mx-auto ">
+      <div className="relative w-full flex justify-between max-md:h-[80px] h-[100px] px-4 sm:px-6 lg:px-14 gap-10">
         <button
           className={`skip-to-content ${skipVisible ? "visible" : ""}`}
           tabIndex={1}
@@ -95,7 +95,7 @@ const Navbar = () => {
             tabIndex={2}
           />
         </Link>
-        <div className="md:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
+        <nav className="md:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
           {navData.map((nav, index) => {
             const isActive =
               pathname === `/${nav.toLowerCase().replace(" ", "-")}`;
@@ -112,7 +112,7 @@ const Navbar = () => {
               </Link>
             );
           })}
-        </div>
+        </nav>
         <div
           className="hidden max-md:flex cursor-pointer"
           onClick={handleMenuClick}

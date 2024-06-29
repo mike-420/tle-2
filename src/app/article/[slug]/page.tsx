@@ -11,7 +11,7 @@ const Gretesque = Bricolage_Grotesque({
 const Page = () => {
   return (
     <section className={`bg-white w-full ${Gretesque.className}`}>
-      <div className="max-w-screen-1440px mx-auto px-4 sm:px-12 md:px-16 py-[70px] flex flex-col min-h-screen gap-72 justify-between border-t">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-12 md:px-16 py-[70px] flex flex-col min-h-screen gap-72 justify-between border-t">
         <div className="flex flex-col items-center">
           <h1
             className={`text-black font-medium text-5xl max-w-[888px] text-center leading-[68px]`}
