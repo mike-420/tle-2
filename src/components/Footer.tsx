@@ -1,5 +1,11 @@
+import { Source_Sans_3 } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+
+const SourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 const Footer = () => {
   return (
     <footer className="  py-16 max-sm:py-12 bg-black min-h-[326px] flex ">
@@ -10,11 +16,13 @@ const Footer = () => {
             alt="The Loft Exchange Logo"
             width={140}
             height={78}
-            className="max-md:w-[100px] max-md:h-[70px] "
+            className="max-md:w-[125px] max-md:h-[75px] object-cover "
           />
           <p className="text-white text-sm">© 2010 — 2020</p>
         </div>
-        <div className="flex-1 flex md:justify-end lg:gap-20 md:gap-12 gap-10">
+        <div
+          className={` ${SourceSans.className}  flex-1 flex md:justify-end lg:gap-20 md:gap-12 gap-10`}
+        >
           <div className="flex flex-col gap-6">
             <h5 className="text text-white font-bold">Navigate</h5>
             <div className="flex flex-col gap-4">

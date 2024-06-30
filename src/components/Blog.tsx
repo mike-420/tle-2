@@ -1,4 +1,5 @@
 import { Source_Sans_3 } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -10,19 +11,21 @@ const SourceSans = Source_Sans_3({
 const BlogCard = () => {
   return (
     <Link href="/article/blog1">
-      <article className="shadow-[0_4px_4px_rgba(0,0,0,0.25)] max-w-[390px] rounded-md overflow-hidden">
+      <article className=" shadow-md max-w-[390px] rounded-md overflow-hidden">
         <div className="h-[250px] overflow-hidden relative">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image"
+            alt="blog post image"
+            width={400}
+            height={300}
             className="absolute inset-0 object-cover"
           />
         </div>
-        <div className="p-7 flex flex-col gap-6">
+        <div className="p-[14px] flex flex-col gap-6">
           <h1 className="text-xl font-bold text-black">
             True Paradise on Earth: <br /> Unknown Place
           </h1>
-          <p className="text-black">
+          <p className={` ${SourceSans.className} text-black`}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium,
           </p>
@@ -37,7 +40,7 @@ const Blog = ({ noTitle }: { noTitle?: boolean }) => {
     <section className="md:px-16 py-16 flex flex-col items-center justify-center px-4 sm:px-12  max-sm:py-12 ">
       {!noTitle && (
         <h1
-          className={`text-[32px] max-sm:text-[28px] font-semibold leading-10 text-black ${SourceSans.className}`}
+          className={`text-[32px] max-sm:mt-[6px] max-sm:text-[28px] font-semibold leading-10 text-black ${SourceSans.className}`}
         >
           My Blog
         </h1>
