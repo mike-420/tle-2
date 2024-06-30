@@ -2,12 +2,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { KeyboardEvent, useEffect, useState } from "react";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Source_Sans_3 } from "next/font/google";
 import { usePathname } from "next/navigation";
 
-const navData = ["Residential Buildings", "Neighborhoods", "About", "Contact"];
+const navData = [
+  {
+    name: "Search",
+    href: "downtown-la-lofts-condos-for-sale",
+  },
+  {
+    name: "Neighborhoods",
+    href: "neighborhoods",
+  },
+  {
+    name: "Blog",
+    href: "blog",
+  },
+  {
+    name: "Contact",
+    href: "contact",
+  },
+];
 
 const Gretesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const SourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -96,19 +118,20 @@ const Navbar = () => {
           />
         </Link>
         <nav className="md:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
-          {navData.map((nav, index) => {
-            const isActive =
-              pathname === `/${nav.toLowerCase().replace(" ", "-")}`;
+          {navData.map((item, index) => {
+            const isActive = pathname === `/${item.href}`;
             return (
               <Link
-                href={`/${nav.toLowerCase().replace(" ", "-")}`}
-                className={` lg:text-lg text-base lg:leading-6 text-center text-black p-2 ${
+                href={`/${item.href}`}
+                className={`${
+                  SourceSans.className
+                } lg:text-xl text-base lg:leading-6 text-center text-black p-2 ${
                   isActive ? " underline underline-offset-2 " : ""
                 } transition hover:underline hover:underline-offset-2 `}
                 key={index}
                 tabIndex={3 + index}
               >
-                {nav}
+                {item.name}
               </Link>
             );
           })}
@@ -129,13 +152,11 @@ const Navbar = () => {
       {/* Mobile nav when menu is open */}
       {isMenuOpen && (
         <nav
-          className={`bg-white py-4 pb-8 flex flex-col items-center justify-center gap-4 text-black ${Gretesque.className} transform transition-transform duration-300 ease-out`}
+          className={`border-b bg-white py-4 pb-8 flex flex-col items-center justify-center gap-4 text-black ${Gretesque.className} transform transition-transform duration-300 ease-out`}
         >
           {navData.map((item, index) => (
             <li className="list-none" key={index}>
-              <Link href={`/${item.toLowerCase().replace(" ", "-")}`}>
-                {item}
-              </Link>
+              <Link href={`/${item.href}`}>{item.name}</Link>
             </li>
           ))}
         </nav>

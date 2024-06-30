@@ -63,7 +63,7 @@ const Slider = () => {
         {data.map((slide, index) => (
           <div
             key={index}
-            className="relative w-full h-[566px] max-sm:h-[420px] flex-shrink-0 bg-cover bg-center  "
+            className="relative w-full h-[566px] max-sm:h-[320px] flex-shrink-0 bg-cover bg-center  "
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             {currentSlide === index && (
