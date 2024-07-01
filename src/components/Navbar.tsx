@@ -8,15 +8,19 @@ import { usePathname } from "next/navigation";
 const navData = [
   {
     name: "Search",
-    href: "downtown-la-lofts-condos-for-sale",
+    href: "southern-california-real-estate-search",
+  },
+  {
+    name: "Loft & Condos",
+    href: "loft-condos",
   },
   {
     name: "Neighborhoods",
     href: "neighborhoods",
   },
   {
-    name: "Blog",
-    href: "blog",
+    name: "Blogs",
+    href: "blogs",
   },
   {
     name: "Contact",
@@ -125,7 +129,7 @@ const Navbar = () => {
                 href={`/${item.href}`}
                 className={`${
                   SourceSans.className
-                } lg:text-xl text-base lg:leading-6 text-center text-black p-2 ${
+                }  text-[1.1rem] max-lg:text-base lg:leading-6 text-center text-black p-2 ${
                   isActive ? " underline underline-offset-2 " : ""
                 } transition hover:underline hover:underline-offset-2 `}
                 key={index}

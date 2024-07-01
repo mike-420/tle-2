@@ -21,17 +21,17 @@ const Subscribe = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 max-w-[870px] gap-2.5 mx-auto">
           <input
             type="text"
-            className={`border border-[#333333] bg-white text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
+            className={`border border-[#333333] placeholder:text-[#666666] bg-white text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
             placeholder="First Name"
           />
           <input
             type="text"
-            className={`border border-[#333333] bg-white text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
+            className={`border border-[#333333] placeholder:text-[#666666] bg-white text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
             placeholder="Last Name"
           />
           <input
             type="text"
-            className={`border border-[#333333] bg-white text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
+            className={`border border-[#333333] bg-white placeholder:text-[#666666] text-[17px] leading-6 ${SourceSans.className} rounded-md font-light text-black py-2.5 px-[15px]`}
             placeholder="Email Address"
           />
           <button

@@ -39,7 +39,7 @@ const Page = () => {
             />
           </div>
           <div className="mt-16">
-            <p className="font-light text-black text-[32px] leading-[45px] max-w-[844px]">
+            <p className="font-light text-black text-[1.1rem] leading-[45px] max-w-[844px]">
               Downtown Los Angeles is booming, from Little Tokyo, to the Fashion
               District, to the Arts District. The latter encompasses three
               square miles on DTLA’s east side. Since the late 2000s, the area

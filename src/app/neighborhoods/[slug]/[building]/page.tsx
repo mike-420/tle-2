@@ -44,15 +44,60 @@ export default function BuildingDetails({
 
   useEffect(() => {
     if (building?.ihomefinderId) {
-      const widgetElement = document.getElementById("real-estate-widget");
-      if (widgetElement) {
-        widgetElement.replaceWith(
-          window.ihfKestrel?.render({
-            component: "marketReportWidget",
-            id: building.ihomefinderId,
-            marketReportTypeId: 1,
-          })
-        );
+      const targetElement = document.getElementById("real-estate-widget");
+
+      if (targetElement) {
+        // Function to execute the inline script
+        const executeScript = () => {
+          if (window.ihfKestrel) {
+            targetElement.replaceWith(
+              window.ihfKestrel.render({
+                component: "marketReportWidget",
+                id: building.ihomefinderId,
+                marketReportTypeId: 1,
+              })
+            );
+          } else {
+            setTimeout(executeScript, 100);
+          }
+        };
+
+        // Create a script element
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.innerHTML = `
+            (function() {
+              const checkIhfKestrel = () => {
+                if (window.ihfKestrel) {
+                  const targetElement = document.getElementById('real-estate-widget');
+                  if (targetElement) {
+                    targetElement.replaceWith(window.ihfKestrel.render({
+                      component: "marketReportWidget",
+                      id: ${building.ihomefinderId},
+                      marketReportTypeId: 1,
+                    }));
+                  }
+                } else {
+                  setTimeout(checkIhfKestrel, 100);
+                }
+              };
+              checkIhfKestrel();
+            })();
+          `;
+
+        // Append the script to the target div
+        targetElement.appendChild(script);
+
+        // Cleanup function
+        const cleanup = () => {
+          if (script.parentNode) {
+            script.parentNode.removeChild(script);
+          }
+        };
+
+        // Register the cleanup function
+        return cleanup;
       }
     }
   }, [building?.ihomefinderId]);
@@ -70,9 +115,11 @@ export default function BuildingDetails({
       <div>
         <GreenLine />
         <div className="relative">
-          <img
+          <Image
             src={building.buildingImage}
             alt={createSlug(building.buildingName)}
+            width={1440}
+            height={500}
             className="object-cover max-h-[410px] w-full max-w-[2500px] mx-auto"
           />
         </div>

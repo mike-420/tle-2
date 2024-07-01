@@ -25,7 +25,7 @@ const NeighborhoodCard = ({ neighborhood, banner }: NeighborhoodInfo) => {
         className="absolute inset-0 object-cover w-full h-full"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 from-10% flex items-end">
-        <p className="text-white font-bold max-sm:font-semibold text-2xl max-sm:text-xl hover:underline p-4 max-sm:p-3 cursor-pointer">
+        <p className="text-white font-medium text-2xl max-sm:text-xl hover:underline p-4 max-sm:p-3 cursor-pointer">
           {neighborhood}
         </p>
       </div>

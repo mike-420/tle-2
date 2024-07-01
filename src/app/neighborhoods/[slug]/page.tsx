@@ -157,9 +157,11 @@ export default async function NeighborhoodPage({
                           Building
                         </span>
                       )}
-                      <img
+                      <Image
                         src={building.buildingImage}
                         alt={`Exterior of ${building.buildingName}`}
+                        width={250}
+                        height={200}
                         className="rounded-l-lg object-cover h-[153px] w-[220px] border border-[#555555] "
                       />
                     </div>
