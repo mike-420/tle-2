@@ -1,5 +1,6 @@
 import { Source_Sans_3 } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const SourceSans = Source_Sans_3({
@@ -8,7 +9,7 @@ const SourceSans = Source_Sans_3({
 });
 const Footer = () => {
   return (
-    <footer className="  py-16 max-sm:py-12 bg-black min-h-[326px] flex ">
+    <footer className="  py-16 pb-[1.1rem] max-sm:py-12 bg-black min-h-[326px] flex ">
       <div className="flex md:flex-row md:gap-0 gap-20 max-md:gap-8 flex-col justify-between flex-1 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14">
         <div className="flex flex-col gap-4 justify-between">
           <Image
@@ -18,23 +19,34 @@ const Footer = () => {
             height={78}
             className="max-md:w-[125px] max-md:h-[75px] object-cover "
           />
-          <p className="text-white text-sm">© 2010 — 2020</p>
+          <p className="text-white text-[0.95rem]">
+            © 2010 — {new Date().getFullYear()}
+          </p>
         </div>
         <div
           className={` ${SourceSans.className}  flex-1 flex md:justify-end lg:gap-20 md:gap-12 gap-10`}
         >
           <div className="flex flex-col gap-6">
-            <h5 className="text text-white font-bold">Navigate</h5>
+            <h5 className="text-[1.1rem] text-white font-bold">Navigate</h5>
             <div className="flex flex-col gap-4">
-              <a href="#" className="footer-link w-fit text-white text-sm">
-                Buildings
-              </a>
-              <a href="#" className="footer-link w-fit text-white text-sm">
+              <Link
+                href="/loft-condos"
+                className="footer-link w-fit text-white text-sm"
+              >
+                Loft & Condos
+              </Link>
+              <Link
+                href="/neighborhoods"
+                className="footer-link w-fit text-white text-sm"
+              >
                 Neighborhoods
-              </a>
-              <a href="#" className="footer-link w-fit text-white text-sm">
-                Articles
-              </a>
+              </Link>
+              <Link
+                href="/blogs"
+                className="footer-link w-fit text-white text-sm"
+              >
+                Blogs
+              </Link>
             </div>
           </div>
         </div>

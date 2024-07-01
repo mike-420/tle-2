@@ -32,7 +32,7 @@ const BuildingCard = ({ building }: { building: BuildingInfo }) => {
         <div className="absolute inset-0 w-full h-full bg-black/40 pointer-events-none" />
       </div>
       <h4
-        className={`text-black w-full text-center text-base max-xl:text-sm max-sm:text-xs font-medium leading-[22px] cursor-pointer ${SourceSans.className}`}
+        className={`text-black w-full text-center text-[1.1rem] max-sm:text-xs font-medium leading-[22px] cursor-pointer ${SourceSans.className}`}
       >
         {building.buildingName}
       </h4>
@@ -42,9 +42,13 @@ const BuildingCard = ({ building }: { building: BuildingInfo }) => {
 
 type Props = {
   allBuildings: BuildingInfo[];
+  buildingRows?: number;
 };
 
-const ResidentialBuildingsSlider = ({ allBuildings }: Props) => {
+const ResidentialBuildingsSlider = ({
+  allBuildings,
+  buildingRows = 2,
+}: Props) => {
   const onlyWidth = useWindowWidth();
   const [buildings, setBuildings] = useState<BuildingInfo[]>([]);
   const [visibleBuildings, setVisibleBuildings] = useState<BuildingInfo[]>([]);
@@ -53,7 +57,12 @@ const ResidentialBuildingsSlider = ({ allBuildings }: Props) => {
   const [slideDirection, setSlideDirection] = useState<"left" | "right">(
     "right"
   );
-  const buildingsPerPage = onlyWidth > 768 && onlyWidth < 1024 ? 8 : 10;
+  const buildingsPerPage =
+    onlyWidth > 768 && onlyWidth < 1024
+      ? 4 * buildingRows
+      : onlyWidth < 768
+      ? 10
+      : 5 * buildingRows;
 
   useEffect(() => {
     setBuildings(allBuildings);
@@ -92,8 +101,11 @@ const ResidentialBuildingsSlider = ({ allBuildings }: Props) => {
                 : ""
             }`}
           >
-            {visibleBuildings.map((building) => (
-              <BuildingCard key={building.ihomefinderId} building={building} />
+            {visibleBuildings.map((building, index) => (
+              <BuildingCard
+                key={`${building.ihomefinderId}-building-${index}`}
+                building={building}
+              />
             ))}
           </div>
         </div>
@@ -104,8 +116,8 @@ const ResidentialBuildingsSlider = ({ allBuildings }: Props) => {
           (_, index) => (
             <button
               key={index}
-              className={` w-6 h-6 max-lg:w-5 max-lg:h-5 border border-black rounded-full mx-2 ${
-                index === currentPage ? "bg-black" : "bg-gray-300"
+              className={` w-6 h-6 max-lg:w-5 max-lg:h-5 border-[1.2px] border-black rounded-full mx-2 ${
+                index === currentPage ? "bg-black" : "bg-white"
               }`}
               onClick={() => handlePageChange(index)}
             />
