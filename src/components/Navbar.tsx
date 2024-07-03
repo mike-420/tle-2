@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const navData = [
   {
     name: "Search",
-    href: "southern-california-real-estate-search",
+    href: "california-real-estate-search",
   },
   {
     name: "Lofts & Condos",
