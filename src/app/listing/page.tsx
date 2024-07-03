@@ -1,19 +1,61 @@
 "use client";
-import Script from "next/script";
 
-const Listing = () => {
+import React, { useEffect } from "react";
+
+const ListingPage = () => {
+  useEffect(() => {
+    const targetElement = document.getElementById("listing-script");
+
+    if (targetElement) {
+      // Function to execute the inline script
+      const executeScript = () => {
+        if (window.ihfKestrel) {
+          targetElement.replaceWith(window.ihfKestrel.render());
+        } else {
+          setTimeout(executeScript, 100);
+        }
+      };
+
+      // Create a script element
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.innerHTML = `
+            (function() {
+              const checkIhfKestrel = () => {
+                if (window.ihfKestrel) {
+                  const targetElement = document.getElementById('listing-script');
+                  if (targetElement) {
+                    targetElement.replaceWith(window.ihfKestrel.render());
+                  }
+                } else {
+                  setTimeout(checkIhfKestrel, 100);
+                }
+              };
+              checkIhfKestrel();
+            })();
+          `;
+
+      // Append the script to the target div
+      targetElement.appendChild(script);
+
+      // Cleanup function
+      const cleanup = () => {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+      };
+
+      // Register the cleanup function
+      return cleanup;
+    }
+  }, []);
+
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-12 lg:px-16 py-16 max-sm:py-12 ">
-      <h2 className={`text-[26px] leading-9 text-black text-center `}>
-        Listings
-      </h2>
-      <div className="h-[563px] text-black py-16">
-        <Script id="listing-script">
-          {`document.currentScript.replaceWith(ihfKestrel.render());`}
-        </Script>
-      </div>
-    </section>
+    <div className="my-16 min-h-[60vh] max-w-[1440px] mx-auto px-4 sm:px-12 lg:px-16 bg-white ">
+      <div id="listing-script"></div>
+    </div>
   );
 };
 
-export default Listing;
+export default ListingPage;

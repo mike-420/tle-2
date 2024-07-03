@@ -2,9 +2,9 @@
 
 import React, { useEffect } from "react";
 
-const OpenHomeReportPage = () => {
+const MortgageCalculatorPage = () => {
   useEffect(() => {
-    const targetElement = document.getElementById("open-home-script");
+    const targetElement = document.getElementById("mortgage-calculator-script");
 
     if (targetElement) {
       // Function to execute the inline script
@@ -24,7 +24,7 @@ const OpenHomeReportPage = () => {
             (function() {
               const checkIhfKestrel = () => {
                 if (window.ihfKestrel) {
-                  const targetElement = document.getElementById('open-home-script');
+                  const targetElement = document.getElementById('mortgage-calculator-script');
                   if (targetElement) {
                     targetElement.replaceWith(window.ihfKestrel.render());
                   }
@@ -53,9 +53,9 @@ const OpenHomeReportPage = () => {
 
   return (
     <div className="my-16 min-h-[60vh] max-w-[1440px] mx-auto px-4 sm:px-12 lg:px-16 bg-white ">
-      <div id="open-home-script"></div>
+      <div id="mortgage-calculator-script"></div>
     </div>
   );
 };
 
-export default OpenHomeReportPage;
+export default MortgageCalculatorPage;

@@ -19,9 +19,9 @@ const FeaturedListings = () => {
               component: "gallerySliderWidget",
               rows: 1,
               navigation: true,
-              nav: "top",
+              nav: "sides",
               auto: true,
-              maxResults: 12,
+              maxResults: 15,
               status: "active",
               featured: true,
               effect: "slide",
@@ -44,15 +44,15 @@ const FeaturedListings = () => {
               if (targetElement) {
                 targetElement.replaceWith(
                   window.ihfKestrel.render({
-                    component: "gallerySliderWidget",
-                    rows: 1,
-                    navigation: true,
-                    nav: "top",
-                    auto: true,
-                    maxResults: 12,
-                    status: "active",
-                    featured: true,
-                    effect: "slide",
+                    "component": "gallerySliderWidget",
+                    "rows": 1,
+                    "navigation": true,
+                    "nav": "sides",
+                    "auto": true,
+                    "maxResults": 15,
+                    "status": "active",
+                    "featured": true,
+                    "effect": "slide"
                   })
                 );
               }
@@ -81,13 +81,13 @@ const FeaturedListings = () => {
   }, []);
 
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-12 lg:px-16 max-sm:pt-[1.8rem] max-sm:py-[1.8rem] py-16  ">
+    <section className="max-w-[1440px] mx-auto px-4 sm:px-12 lg:px-16 max-sm:pt-[1.8rem] max-sm:py-[1.8rem] py-8  ">
       <h2
         className={`text-[26px] max-sm:text-[21px] leading-9 text-black text-center ${SourceSans.className} `}
       >
         Featured Listings
       </h2>
-      <div className="h-[500px] text-black py-16  ">
+      <div className=" min-h-[500px] text-black pt-8  ">
         <div id="featured-listings"></div>
       </div>
     </section>

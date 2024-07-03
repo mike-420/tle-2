@@ -141,6 +141,7 @@ export default async function NeighborhoodPage({
             <div className="text-lg flex flex-col items-center justify-center gap-4  text-black">
               {neighborhood.buildings?.map((building, index) => {
                 // to keep record of tabIndex for each building card
+                console.log(building);
                 tabCount = index + 11;
                 return (
                   <Link
@@ -151,7 +152,7 @@ export default async function NeighborhoodPage({
                     key={index}
                     tabIndex={tabCount}
                   >
-                    <div className="flex flex-col gap-1.5">
+                    <div className="flex flex-col gap-1.5 ">
                       {index === 0 && (
                         <span className={`opacity-0 ${Gretesque.className}`}>
                           Building
@@ -162,10 +163,10 @@ export default async function NeighborhoodPage({
                         alt={`Exterior of ${building.buildingName}`}
                         width={250}
                         height={200}
-                        className="rounded-l-lg object-cover h-[153px] w-[220px] border border-[#555555] "
+                        className="rounded-l-lg object-cover h-[153px] border border-[#555555] "
                       />
                     </div>
-                    <div className="flex flex-col gap-1.5">
+                    <div className="flex flex-col gap-1.5 ">
                       {index === 0 && (
                         <span
                           className={`px-4 font-semibold text-left text-black ${Gretesque.className}`}
@@ -189,13 +190,12 @@ export default async function NeighborhoodPage({
                       )}
                       <div className="relative border-y border-r border-[#555555] flex flex-col gap-y-4 px-4 flex-1 justify-center rounded-r-lg">
                         <div className="absolute left-0 w-[1px] h-[117px] bg-[#555555] "></div>
-                        {building.pool ||
-                          (building.gym && (
-                            <div className="flex items-center gap-x-6">
-                              {building.pool && <PoolIcon />}
-                              {building.gym && <GymIcon />}
-                            </div>
-                          ))}
+                        {(building.pool || building.gym) && (
+                          <div className="flex items-center gap-x-6">
+                            {building.pool && <PoolIcon />}
+                            {building.gym && <GymIcon />}
+                          </div>
+                        )}
 
                         {building.securedparking && (
                           <p className="text-[#333] text-base max-sm:text-sm">
