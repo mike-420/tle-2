@@ -11,16 +11,16 @@ const navData = [
     href: "southern-california-real-estate-search",
   },
   {
-    name: "Loft & Condos",
-    href: "loft-condos",
+    name: "Lofts & Condos",
+    href: "lofts-condos",
   },
   {
     name: "Neighborhoods",
     href: "neighborhoods",
   },
   {
-    name: "Blogs",
-    href: "blogs",
+    name: "Blog",
+    href: "blog",
   },
   {
     name: "Contact",
@@ -119,6 +119,7 @@ const Navbar = () => {
             height={70}
             className="max-md:w-[100px] max-md:h-[60px]"
             tabIndex={2}
+            priority
           />
         </Link>
         <nav className="md:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
