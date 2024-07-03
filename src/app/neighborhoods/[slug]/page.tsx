@@ -141,7 +141,6 @@ export default async function NeighborhoodPage({
             <div className="text-lg flex flex-col items-center justify-center gap-4  text-black">
               {neighborhood.buildings?.map((building, index) => {
                 // to keep record of tabIndex for each building card
-                console.log(building);
                 tabCount = index + 11;
                 return (
                   <Link
