@@ -34,11 +34,11 @@ const LoftCondosPage = async () => {
 
       <div className="w-full flex items-center justify-center mt-32 ">
         <button
-          className={`${SourceSans.className} text-lg bg-white text-black py-2.5 w-[400px] rounded-md border border-black
+          className={`${SourceSans.className} text-lg bg-white text-black py-3 w-[400px] rounded-md border border-black
           hover:bg-black hover:text-white transition ease-in `}
         >
-          <Link href="/southern-california-real-estate-search">
-            Search all Southern California Real Estate
+          <Link href="/california-real-estate-search">
+            Search all California Real Estate
           </Link>
         </button>
       </div>

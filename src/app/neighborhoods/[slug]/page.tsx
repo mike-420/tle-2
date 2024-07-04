@@ -132,7 +132,7 @@ export default async function NeighborhoodPage({
           </aside>
 
           {/* Main content */}
-          <section className="flex flex-1 shrink-0 flex-col max-sm:gap-6 gap-8">
+          <section className="flex flex-1 w-full shrink-0 flex-col max-sm:gap-6 gap-8">
             <h1
               className={` max-sm:text-xl text-2xl font-bold leading-9 text-gray-900 ${Gretesque.className}`}
             >
@@ -151,7 +151,7 @@ export default async function NeighborhoodPage({
                     key={index}
                     tabIndex={tabCount}
                   >
-                    <div className="flex flex-col gap-1.5 ">
+                    <div className="flex flex-col justify-end items-end gap-1.5 ">
                       {index === 0 && (
                         <span className={`opacity-0 ${Gretesque.className}`}>
                           Building
@@ -173,8 +173,8 @@ export default async function NeighborhoodPage({
                           Building
                         </span>
                       )}
-                      <div className="border-y border-[#555555] px-4 flex flex-1 items-center">
-                        <h4 className="font-semibold text-base max-sm:text-sm text-left text-[#333]">
+                      <div className="border-y border-[#555555] px-4 flex flex-1 items-center justify-start">
+                        <h4 className=" max-w-[200px]  font-semibold text-base max-sm:text-sm text-left text-[#333]">
                           {building.buildingName}
                         </h4>
                       </div>

@@ -4,27 +4,32 @@ import Link from "next/link";
 import React, { KeyboardEvent, useEffect, useState } from "react";
 import { Bricolage_Grotesque, Source_Sans_3 } from "next/font/google";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const navData = [
   {
+    name: "Home",
+    href: "/",
+  },
+  {
     name: "Search",
-    href: "california-real-estate-search",
+    href: "/california-real-estate-search",
   },
   {
     name: "Lofts & Condos",
-    href: "lofts-condos",
+    href: "/lofts-condos",
   },
   {
     name: "Neighborhoods",
-    href: "neighborhoods",
+    href: "/neighborhoods",
   },
   {
     name: "Blog",
-    href: "blog",
+    href: "/blog",
   },
   {
     name: "Contact",
-    href: "contact",
+    href: "/contact",
   },
 ];
 
@@ -122,17 +127,17 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <nav className="md:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
+        <nav className="lg:flex items-end pb-3 justify-end h-full  max-lg:gap-8 gap-12 w-full hidden">
           {navData.map((item, index) => {
             const isActive = pathname === `/${item.href}`;
             return (
               <Link
-                href={`/${item.href}`}
+                href={`${item.href}`}
                 className={`${
                   SourceSans.className
                 }  text-[1.1rem] max-lg:text-base lg:leading-6 text-center text-black p-2 ${
-                  isActive ? " underline underline-offset-2 " : ""
-                } transition hover:underline hover:underline-offset-2 `}
+                  isActive ? " underline nav-underline " : ""
+                } transition ease-in-out hover:underline hover:nav-underline `}
                 key={index}
                 tabIndex={3 + index}
               >
@@ -140,9 +145,12 @@ const Navbar = () => {
               </Link>
             );
           })}
+          <Button className={`${SourceSans.className} text-base font-medium `}>
+            <Link href="/login">Log In</Link>
+          </Button>
         </nav>
         <div
-          className="hidden max-md:flex cursor-pointer"
+          className="hidden max-lg:flex cursor-pointer"
           onClick={handleMenuClick}
         >
           <Image
