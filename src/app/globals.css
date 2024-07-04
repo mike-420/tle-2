@@ -114,6 +114,11 @@
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
   }
 
+  .nav-underline {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 19%;
+  }
+
   @keyframes slide-in-right {
     from {
       transform: translateX(100%);

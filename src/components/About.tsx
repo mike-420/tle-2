@@ -1,6 +1,7 @@
 import React from "react";
 import { Source_Sans_3 } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const SourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -51,7 +52,7 @@ const About = () => {
             <button
               className={`text-[#555555] ${SourceSans.className} py-5 max-sm:py-[1.1rem] max-sm:text-[1.4rem] uppercase w-full flex items-center justify-center text-2xl leading-[30px] bg-white border border-[#888888] rounded-lg`}
             >
-              Contact Roxanna
+              <Link href="/contact">Contact Roxanna</Link>
             </button>
           </div>
         </div>

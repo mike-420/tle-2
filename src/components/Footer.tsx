@@ -7,6 +7,26 @@ const SourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
+
+const footerLinks = [
+  {
+    name: "Lofts & Condos",
+    href: "/lofts-condos",
+  },
+  {
+    name: "Neighborhoods",
+    href: "/neighborhoods",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+
 const Footer = () => {
   return (
     <footer className="  py-16 pb-[1.1rem] max-sm:py-12 bg-black min-h-[326px] flex ">
@@ -27,26 +47,17 @@ const Footer = () => {
           className={` ${SourceSans.className}  flex-1 flex md:justify-end lg:gap-20 md:gap-12 gap-10`}
         >
           <div className="flex flex-col gap-6">
-            <h5 className="text-[1.1rem] text-white font-bold">Navigate</h5>
+            <h5 className="text-[1.15rem] text-white font-bold">Navigate</h5>
             <div className="flex flex-col gap-4">
-              <Link
-                href="/loft-condos"
-                className="footer-link w-fit text-white text-sm"
-              >
-                Loft & Condos
-              </Link>
-              <Link
-                href="/neighborhoods"
-                className="footer-link w-fit text-white text-sm"
-              >
-                Neighborhoods
-              </Link>
-              <Link
-                href="/blogs"
-                className="footer-link w-fit text-white text-sm"
-              >
-                Blogs
-              </Link>
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="footer-link transition hover:underline nav-underline w-fit text-white text-base"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
