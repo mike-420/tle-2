@@ -40,7 +40,7 @@ const Footer = () => {
             className="max-md:w-[125px] max-md:h-[75px] object-cover "
           />
           <p className="text-white text-[0.95rem]">
-            © 2010 — {new Date().getFullYear()}
+            © {new Date().getFullYear()}
           </p>
         </div>
         <div
