@@ -1,10 +1,8 @@
 import FeaturedListings from "@/components/FeaturedListings";
 import About from "../components/About";
-import Blog from "../components/Blog";
 import Neighborhoods from "../components/Neighborhoods";
 import ResidentialBuildings from "../components/ResidentialBuildings";
 import Slider from "../components/Slider";
-import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
@@ -19,8 +17,8 @@ export default function Home() {
       <About />
       <ResidentialBuildings />
       <Neighborhoods />
-      <Blog />
-      <Subscribe />
+      {/* <Blog /> */}
+      {/* <Subscribe /> */}
     </div>
   );
 }
