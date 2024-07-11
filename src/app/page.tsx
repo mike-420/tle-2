@@ -6,7 +6,7 @@ import Slider from "../components/Slider";
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen pb-16">
+    <div className="bg-white min-h-screen pb-32">
       <Slider />
       <div className="max-sm:mt-[29px] mt-[68px] flex flex-col items-center gap-10">
         <h1 className=" text-4xl max-sm:text-[1.6rem] leading-10 max-sm:leading-[2.2rem] text-black text-center">
