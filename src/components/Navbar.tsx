@@ -146,7 +146,7 @@ const Navbar = () => {
             );
           })}
           <Button className={`${SourceSans.className} text-base font-medium `}>
-            <Link href="/login">Log In</Link>
+            <Link href="/property-organizer?section=signin">Log In</Link>
           </Button>
         </nav>
         <div

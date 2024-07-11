@@ -10,6 +10,10 @@ const SourceSans = Source_Sans_3({
 
 const footerLinks = [
   {
+    name: "Home",
+    href: "/",
+  },
+  {
     name: "Lofts & Condos",
     href: "/lofts-condos",
   },
