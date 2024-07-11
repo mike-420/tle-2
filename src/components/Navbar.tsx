@@ -23,10 +23,10 @@ const navData = [
     name: "Neighborhoods",
     href: "/neighborhoods",
   },
-  {
-    name: "Blog",
-    href: "/blog",
-  },
+  // {
+  //   name: "Blog",
+  //   href: "/blog",
+  // },
   {
     name: "Contact",
     href: "/contact",
