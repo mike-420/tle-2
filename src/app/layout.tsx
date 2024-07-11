@@ -7,9 +7,9 @@ import { Metadata } from "next";
 
 const libre = Libre_Baskerville({ subsets: ["latin"], weight: ["400", "700"] });
 
-export const metadata: Metadata = {
-  title: "The Loft Exchange",
-};
+//  export const metadata: Metadata = {
+//  title: "The Loft Exchange",
+//  };
 
 export default function RootLayout({
   children,

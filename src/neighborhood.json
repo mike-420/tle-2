@@ -44,7 +44,7 @@
         "totalUnits": 53,
         "year": "1923/2012",
         "millsAct": "no",
-        "petFriendly": "no",
+        "petFriendly": "yes",
         "ihomefinderId": "2774833"
       },
       {
@@ -59,7 +59,7 @@
         "totalUnits": 104,
         "year": "1925/2005",
         "millsAct": "yes",
-        "petFriendly": "no",
+        "petFriendly": "yes",
         "ihomefinderId": "2774846"
       },
       {
