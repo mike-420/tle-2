@@ -14,16 +14,5 @@ const nextConfig = {
   },
 };
 
-module.exports = {
-  redirects: async () => {
-    return [
-      {
-        source: '/about',
-        destination: '/',
-        permanent: false,
-      },
-    ]
-  },
-}
 
 export default nextConfig;
