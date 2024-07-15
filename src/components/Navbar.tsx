@@ -133,11 +133,9 @@ const Navbar = () => {
             return (
               <Link
                 href={`${item.href}`}
-                className={`${
-                  SourceSans.className
-                }  text-[1.1rem] max-lg:text-base lg:leading-6 text-center text-black p-2 ${
-                  isActive ? " underline nav-underline " : ""
-                } transition ease-in-out hover:underline hover:nav-underline `}
+                className={`${SourceSans.className
+                  }  text-[1.1rem] max-lg:text-base lg:leading-6 text-center text-black p-2 ${isActive ? " underline nav-underline " : ""
+                  } transition ease-in-out hover:underline hover:nav-underline `}
                 key={index}
                 tabIndex={3 + index}
               >
@@ -172,6 +170,9 @@ const Navbar = () => {
               <Link href={`/${item.href}`}>{item.name}</Link>
             </li>
           ))}
+          <Button className={`${SourceSans.className} text-base font-medium `}>
+            <Link href="/property-organizer?section=signin">Log In</Link>
+          </Button>
         </nav>
       )}
     </header>

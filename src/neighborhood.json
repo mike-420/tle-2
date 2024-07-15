@@ -305,13 +305,13 @@
     ]
   },
   {
-    "neighborhood": "Bunkerhill",
+    "neighborhood": "Bunker Hill",
     "buildings": [
       {
         "buildingName": "Bunker Hill Tower",
         "streetAddress": "800 W 1st Street",
         "zipCode": 90012,
-        "area": "Bunkerhill",
+        "area": "Bunker Hill",
         "securedparking": true,
         "pool": true,
         "gym": true,
@@ -326,7 +326,7 @@
         "buildingName": "Promenade West",
         "streetAddress": "880 W. 1st Street",
         "zipCode": 90012,
-        "area": "Bunkerhill",
+        "area": "Bunker Hill",
         "securedParking": true,
         "pool": true,
         "gym": true,
@@ -341,7 +341,7 @@
         "buildingName": "The Promenade Condominiums",
         "streetAddress": "121 S Hope Street",
         "zipCode": 90012,
-        "area": "Bunkerhill",
+        "area": "Bunker Hill",
         "securedParking": true,
         "pool": true,
         "gym": true,
@@ -388,7 +388,7 @@
         "ihomefinderId": "2774996"
       },
       {
-        "buildingName": "Santee Village-Cornell Lofts",
+        "buildingName": "Santee Village Cornell Lofts",
         "streetAddress": "746 S Los Angeles Street",
         "zipCode": 90014,
         "area": "Fashion District",
@@ -403,7 +403,7 @@
         "ihomefinderId": "2774995"
       },
       {
-        "buildingName": "Santee Village-Eckardt Lofts",
+        "buildingName": "Santee Village Eckardt Lofts",
         "streetAddress": "738 S Los Angeles Street",
         "zipCode": 90014,
         "area": "Fashion District",
@@ -418,7 +418,7 @@
         "ihomefinderId": "2774994"
       },
       {
-        "buildingName": "Santee Village-Textile Lofts",
+        "buildingName": "Santee Village Textile Lofts",
         "streetAddress": "315 East 8th Street",
         "zipCode": 90014,
         "area": "Fashion District",
