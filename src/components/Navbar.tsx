@@ -170,9 +170,6 @@ const Navbar = () => {
               <Link href={`/${item.href}`}>{item.name}</Link>
             </li>
           ))}
-          <Button className={`${SourceSans.className} text-base font-medium `}>
-            <Link href="/property-organizer?section=signin">Log In</Link>
-          </Button>
         </nav>
       )}
     </header>
