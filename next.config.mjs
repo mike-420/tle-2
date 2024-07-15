@@ -186,17 +186,17 @@ const nextConfig = {
       },
       {
         source: "/santee-cornell-lofts-for-sale-lease",
-        destination: "/neighborhoods/fashion-district/santee-villagecornell-lofts",
+        destination: "/neighborhoods/fashion-district/santee-village-cornell-lofts",
         permanent: true,
       },
       {
         source: "/santee-eckardt-lofts-for-sale-lease",
-        destination: "/neighborhoods/fashion-district/santee-villageeckardt-lofts",
+        destination: "/neighborhoods/fashion-district/santee-village-eckardt-lofts",
         permanent: true,
       },
       {
         source: "/textile-lofts",
-        destination: "/neighborhoods/fashion-district/santee-villagetextile-lofts",
+        destination: "/neighborhoods/fashion-district/santee-village-textile-lofts",
         permanent: true,
       },
       {
