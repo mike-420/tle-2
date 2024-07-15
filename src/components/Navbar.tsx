@@ -9,19 +9,19 @@ import { Button } from "./ui/button";
 const navData = [
   {
     name: "Home",
-    href: "https://www.theloftexchange.com/",
+    href: "/",
   },
   {
     name: "Search",
-    href: "https://www.theloftexchange.com/california-real-estate-search",
+    href: "/california-real-estate-search",
   },
   {
     name: "Lofts & Condos",
-    href: "https://www.theloftexchange.com/lofts-condos",
+    href: "/lofts-condos",
   },
   {
     name: "Neighborhoods",
-    href: "https://www.theloftexchange.com/neighborhoods",
+    href: "/neighborhoods",
   },
   // {
   //   name: "Blog",
