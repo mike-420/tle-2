@@ -165,11 +165,16 @@ const Navbar = () => {
         <nav
           className={`border-b bg-white py-4 pb-8 flex flex-col items-center justify-center gap-4 text-black ${Gretesque.className} transform transition-transform duration-300 ease-out`}
         >
-          {navData.map((item, index) => (
-            <li className="list-none" key={index}>
-              <Link href={`/${item.href}`}>{item.name}</Link>
-            </li>
-          ))}
+          <li className="list-none text-center" >
+            <Link href="/" className="leading-8">Home</Link><br></br>
+            <Link href="/california-real-estate-search" className="leading-8">Search</Link><br></br>
+            <Link href="/lofts-condos" className="leading-8">Lofts & Condos</Link><br></br>
+            <Link href="/neighborhoods" className="leading-8">Neighborhoods</Link><br></br>
+            <Link href="/contact" className="leading-8">Contact</Link><br></br>
+          </li>
+          <Button className={`${SourceSans.className} text-base font-medium `}>
+            <Link href="/property-organizer?section=signin">Log In</Link>
+          </Button>
         </nav>
       )}
     </header>

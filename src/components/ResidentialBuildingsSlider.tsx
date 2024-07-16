@@ -32,7 +32,7 @@ const BuildingCard = ({ building }: { building: BuildingInfo }) => {
         <div className="absolute inset-0 w-full h-full bg-black/40 pointer-events-none" />
       </div>
       <h4
-        className={`text-black w-full text-center text-[1.1rem] max-sm:text-xs font-medium leading-[22px] cursor-pointer ${SourceSans.className}`}
+        className={`text-black w-full text-center text-[1.1rem] max-sm:text-base font-medium leading-[22px] cursor-pointer ${SourceSans.className}`}
       >
         {building.buildingName}
       </h4>
@@ -61,8 +61,8 @@ const ResidentialBuildingsSlider = ({
     onlyWidth > 768 && onlyWidth < 1024
       ? 4 * buildingRows
       : onlyWidth < 768
-      ? 10
-      : 5 * buildingRows;
+        ? 10
+        : 5 * buildingRows;
 
   useEffect(() => {
     setBuildings(allBuildings);
@@ -93,13 +93,12 @@ const ResidentialBuildingsSlider = ({
       <div className="flex flex-col gap-10 sm:gap-[97px] mt-16 max-sm:mt-8 ">
         <div className="relative">
           <div
-            className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-4 max-md:gap-x-2 gap-y-10 max-lg:gap-y-6 max-md:gap-y-4 transition-transform duration-500 transform  ${
-              isAnimating
+            className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-4 max-md:gap-x-2 gap-y-10 max-lg:gap-y-6 max-md:gap-y-4 transition-transform duration-500 transform  ${isAnimating
                 ? slideDirection === "right"
                   ? "slide-out-left"
                   : "slide-out-right"
                 : ""
-            }`}
+              }`}
           >
             {visibleBuildings.map((building, index) => (
               <BuildingCard
@@ -116,9 +115,8 @@ const ResidentialBuildingsSlider = ({
           (_, index) => (
             <button
               key={index}
-              className={` w-6 h-6 max-lg:w-5 max-lg:h-5 border-[1.2px] border-black rounded-full mx-2 ${
-                index === currentPage ? "bg-black" : "bg-white"
-              }`}
+              className={` w-6 h-6 max-lg:w-5 max-lg:h-5 border-[1.2px] border-black rounded-full mx-2 ${index === currentPage ? "bg-black" : "bg-white"
+                }`}
               onClick={() => handlePageChange(index)}
             />
           )
