@@ -171,10 +171,10 @@ const Navbar = () => {
             <Link href="https://www.theloftexchange.com/lofts-condos" className="leading-8">Lofts & Condos</Link><br></br>
             <Link href="https://www.theloftexchange.com/neighborhoods" className="leading-8">Neighborhoods</Link><br></br>
             <Link href="https://www.theloftexchange.com/contact" className="leading-8">Contact</Link><br></br>
+            <Button className={`${SourceSans.className} text-base font-medium `}>
+              <Link href="/property-organizer?section=signin">Log In</Link>
+            </Button>
           </li>
-          <Button className={`${SourceSans.className} text-base font-medium `}>
-            <Link href="/property-organizer?section=signin">Log In</Link>
-          </Button>
         </nav>
       )}
     </header>
