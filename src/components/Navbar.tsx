@@ -143,10 +143,10 @@ const Navbar = () => {
               </Link>
             );
           })}
-          <Button className={`${SourceSans.className} text-base font-medium `}>
-            <Link href="/property-organizer?section=signin">Log In</Link>
-          </Button>
         </nav>
+        <Button className={`${SourceSans.className} text-base font-medium `}>
+          <Link href="/property-organizer?section=signin">Log In</Link>
+        </Button>
         <div
           className="hidden max-lg:flex cursor-pointer"
           onClick={handleMenuClick}
@@ -167,10 +167,10 @@ const Navbar = () => {
         >
           <li className="list-none text-center" >
             <Link href="/" className="leading-8">Home</Link><br></br>
-            <Link href="/california-real-estate-search" className="leading-8">Search</Link><br></br>
-            <Link href="/lofts-condos" className="leading-8">Lofts & Condos</Link><br></br>
-            <Link href="/neighborhoods" className="leading-8">Neighborhoods</Link><br></br>
-            <Link href="/contact" className="leading-8">Contact</Link><br></br>
+            <Link href="https://www.theloftexchange.com/california-real-estate-search" className="leading-8">Search</Link><br></br>
+            <Link href="https://www.theloftexchange.com/lofts-condos" className="leading-8">Lofts & Condos</Link><br></br>
+            <Link href="https://www.theloftexchange.com/neighborhoods" className="leading-8">Neighborhoods</Link><br></br>
+            <Link href="https://www.theloftexchange.com/contact" className="leading-8">Contact</Link><br></br>
           </li>
           <Button className={`${SourceSans.className} text-base font-medium `}>
             <Link href="/property-organizer?section=signin">Log In</Link>
