@@ -70,6 +70,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -80,7 +81,8 @@
 
   @media (max-width: 640px) {
     .text-stroke-black {
-      -webkit-text-stroke: 1px black; /* Stroke width for small devices */
+      -webkit-text-stroke: 1px black;
+      /* Stroke width for small devices */
     }
   }
 
@@ -95,7 +97,8 @@
 
   .skip-to-content {
     position: absolute;
-    top: -60px; /* Initially hide the button */
+    top: -60px;
+    /* Initially hide the button */
     left: 10px;
     color: black;
     background: white;
@@ -106,7 +109,8 @@
 
   .skip-to-content:focus,
   .skip-to-content.visible {
-    top: 10px; /* Show the button when focused or visible */
+    top: 10px;
+    /* Show the button when focused or visible */
     outline: 4px dashed black;
   }
 
@@ -124,6 +128,7 @@
       transform: translateX(100%);
       opacity: 0.5;
     }
+
     to {
       transform: translateX(0);
       opacity: 1;
@@ -135,6 +140,7 @@
       transform: translateX(-100%);
       opacity: 0.5;
     }
+
     to {
       transform: translateX(0);
       opacity: 1;
@@ -146,6 +152,7 @@
       transform: translateX(0);
       opacity: 1;
     }
+
     to {
       transform: translateX(100%);
       opacity: 0.5;
@@ -157,6 +164,7 @@
       transform: translateX(0);
       opacity: 1;
     }
+
     to {
       transform: translateX(-100%);
       opacity: 0.5;
@@ -182,4 +190,9 @@
   .animating {
     height: 100%;
   }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
 }

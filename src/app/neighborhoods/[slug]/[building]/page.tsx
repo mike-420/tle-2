@@ -8,6 +8,7 @@ import GreenLine from "@/components/GreenLine";
 import Script from "next/script";
 import { BuildingInfo, NeighborhoodInfo } from "@/helper/api";
 import { LoaderCircle } from "lucide-react";
+import Dropdown from "@/components/Dropdown";
 
 const Gretesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -225,6 +226,7 @@ export default function BuildingDetails({
           };
         `}
           </Script>
+          <Dropdown />
         </section>
       </div>
     </div>
